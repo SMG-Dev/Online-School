@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div th:fragment="meta">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="label" content="">
+        <meta name="keywords" content="">
+        <meta name="distribution" content="web">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" href="/static/img/favicon.png">
+		<title>{% block title %}{% endblock %}</title>
+        <link href="/css/jumbotron.css" rel="stylesheet">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
+        <link rel="stylesheet" href="/static/css/ripples.min.css">
+        <link rel="stylesheet" href="/static/css/snackbar.min.css">
+        <link rel="stylesheet" href="/static/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/css/extension.css">
+    </div>
+    <!-- CSS -->
+</head>
+<body cz-shortcut-listen="true">
+    <nav class="navbar navbar-static-top navbar-default">
+        <div class="container">
+            <div class="nav-header">
+                <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">СМГ</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="/" class="nav-link">Начало</a></li>
+                    <li class="nav-item"><a href="#">Новини</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="about" role="button" aria-haspopup="true" aria-expanded="false">За училището</a>
+						<div class="dropdown-menu" aria-labelledby="about">
+							<a class="dropdown-item" href="history.php">История</a>
+							<a class="dropdown-item" href="administration.php">Ръководство</a>
+							<a class="dropdown-item" href="budjet.php">Бюджет</a>
+							<a class="dropdown-item" href="http://sop.bg/smg-58/">Профил на купувача</a>
+							<a class="dropdown-item" href="uploads/SMG-Pravilnik-ustroistvo-i-deinostta-za-2018-2019.pdf">Вътрешен правилник</a>
+							<a class="dropdown-item" href="uploads/SMG-Etichen-codex-za-2018-2019.pdf">Етичен Кодекс</a>
+							<a class="dropdown-item" href="uploads/Strategia razvitie na SMG za 2016-2021.pdf">Стратегия за развитие</a>
+							<a class="dropdown-item" href="uploads/SMG-Pravilnik-bezopasni-uslovia-za-2018-2019.pdf">Правилник за безопасни условия</a>
+							<a class="dropdown-item" href="uploads/SMG-Pravilnik-vytreshen-trudov-red-za-2018-2019.pdf">Правилник за трудов ред</a>
+							<a class="dropdown-item" href="ikd.php">ИЗВЪНКЛАСНИ ДЕЙНОСТИ</a>
+							<a class="dropdown-item" href="http://smg.bg/uploads/Sreshtu-terorizma-2018.pdf">Срещу тероризма</a>
+						</div>
+					</li>
+                    <li class="nav-item"><a href="#">Архив</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+							{placeholder}
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="/user/register" class="nav-link">Регистрация</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Здравейте{% block user %}{% endblock %}!
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
+	<!-- HTML -->
+	<footer>
+			<div class="container container-holder">
+					<ul class="row">
+							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+									<h3 class="list-title">TechEdu ++</h3>
+									<hr>
+									<ul class="footer-list">
+											<li>
+													<a href="//infocourse.SMG.bg/aboutus.php">
+															За нас
+													</a>
+											</li>
+											<li>
+													<a href="//infocourse.SMG.bg/aboutus.php#trainers">
+															Лектори
+													</a>
+											</li>
+											<li>
+													<a href="//infocourse.SMG.bg/aboutus.php#authors">
+															Автори на проекта
+													</a>
+											</li>
+									</ul>
+							</li>
+							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+									<h3 class="list-title">
+											Курсове &amp; Семинари
+									</h3>
+									<hr>
+									<ul class="footer-list">
+											<li>
+													<a href="//infocourse.SMG.bg/trainings/tracks">
+															Тракове
+													</a></li>
+											<li>
+													<a href="//infocourse.SMG.bg/trainings/courses">
+															Курсове
+													</a>
+											</li>
+											<li>
+													<a href="//infocourse.SMG.bg/trainings/seminars">
+															Семинари
+													</a>
+											</li>
+									</ul>
+							</li>
+							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+									<h3 class="list-title">
+											Партньори
+									</h3>
+									<hr>
+									<ul class="footer-list">
+											<li>
+													<a target="_blank" href="https://delta.bg/">
+															Delta.BG
+													</a>
+											</li>
+											<li>
+													<a target="_blank" href="http://www.vrexpress.bg/">
+															VR Express
+													</a>
+											</li>
+											<li>
+													<a target="_blank" href="https://consent.io/">
+															Consent.io
+													</a>
+											</li>
+											<li>
+													<a target="_blank" href="http://www.igreet.co/">
+															iGreet
+													</a>
+											</li>
+									</ul>
+							</li>
+							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+									<ul class="social">
+											<li><a href="https://facebook.com/TechEducationGroup/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-facebook"></span></a></li>
+											<li><a href="https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ" target="_blank" class="icon-btn"><span class="fa fa-2x fa-youtube-play"></span></a></li>
+											<li><a href="http://github.com/TechEducationPlusPlus/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-github"></span></a></li>
+									</ul>
+									<div class="all-rights-reserved">
+											<p>&copy; 2017 TechEdu ++</p>
+											<p>Всички права запазени.</p>
+											<p> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png"></a></p>
+									</div>
+							</li>
+					</ul>
+			</div>
+	</footer>
+	<div th:fragment="js">
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/tether.min.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+			<script src="/js/material.min.js"></script>
+			<script src="/js/ripples.min.js"></script>
+			<script src="/js/snackbar.min.js"></script>
+			<script src="/js/jquery.nouislider.min.js"></script>
+			<script src="/js/main.js"></script>
+			<script>
+			$('.dropdown-toggle').dropdown();
+			</script>
+	</div>
+	<!-- JS -->
+	</body>
+</html>
