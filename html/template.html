@@ -11,180 +11,153 @@
         <meta name="distribution" content="web">
         <meta name="robots" content="index, follow">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="icon" href="/static/img/favicon.png">
-		<title>{% block title %}{% endblock %}</title>
-        <link href="/css/jumbotron.css" rel="stylesheet">
+				<title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
-        <link rel="stylesheet" href="/static/css/ripples.min.css">
-        <link rel="stylesheet" href="/static/css/snackbar.min.css">
-        <link rel="stylesheet" href="/static/css/font-awesome.css">
-        <link rel="stylesheet" href="/static/css/extension.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="icon" href="/static/img/favicon.png">
+				<link href="/static/css/jumbotron.css" rel="stylesheet">
+				<link rel="stylesheet" href="/static/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+				<link href="/static/css/style.css" rel="stylesheet">
     </div>
     <!-- CSS -->
 </head>
 <body cz-shortcut-listen="true">
-    <nav class="navbar navbar-static-top navbar-default">
-        <div class="container">
-            <div class="nav-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand">СМГ</a>
-            </div>
-            <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="/" class="nav-link">Начало</a></li>
-                    <li class="nav-item"><a href="#">Новини</a></li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="about" role="button" aria-haspopup="true" aria-expanded="false">За училището</a>
-						<div class="dropdown-menu" aria-labelledby="about">
-							<a class="dropdown-item" href="history.php">История</a>
-							<a class="dropdown-item" href="administration.php">Ръководство</a>
-							<a class="dropdown-item" href="budjet.php">Бюджет</a>
-							<a class="dropdown-item" href="http://sop.bg/smg-58/">Профил на купувача</a>
-							<a class="dropdown-item" href="uploads/SMG-Pravilnik-ustroistvo-i-deinostta-za-2018-2019.pdf">Вътрешен правилник</a>
-							<a class="dropdown-item" href="uploads/SMG-Etichen-codex-za-2018-2019.pdf">Етичен Кодекс</a>
-							<a class="dropdown-item" href="uploads/Strategia razvitie na SMG za 2016-2021.pdf">Стратегия за развитие</a>
-							<a class="dropdown-item" href="uploads/SMG-Pravilnik-bezopasni-uslovia-za-2018-2019.pdf">Правилник за безопасни условия</a>
-							<a class="dropdown-item" href="uploads/SMG-Pravilnik-vytreshen-trudov-red-za-2018-2019.pdf">Правилник за трудов ред</a>
-							<a class="dropdown-item" href="ikd.php">ИЗВЪНКЛАСНИ ДЕЙНОСТИ</a>
-							<a class="dropdown-item" href="http://smg.bg/uploads/Sreshtu-terorizma-2018.pdf">Срещу тероризма</a>
-						</div>
-					</li>
-                    <li class="nav-item"><a href="#">Архив</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-							{placeholder}
-                        </a>
-                    </li>
-                    <li class="nav-item"><a href="/user/register" class="nav-link">Регистрация</a></li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            Здравейте{% block user %}{% endblock %}!
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-	<div class="container">
-		{% block content %}{% endblock %}
-	</div>
-	<!-- HTML -->
-	<footer>
-			<div class="container container-holder">
-					<ul class="row">
-							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
-									<h3 class="list-title">TechEdu ++</h3>
-									<hr>
-									<ul class="footer-list">
-											<li>
-													<a href="//infocourse.SMG.bg/aboutus.php">
-															За нас
-													</a>
-											</li>
-											<li>
-													<a href="//infocourse.SMG.bg/aboutus.php#trainers">
-															Лектори
-													</a>
-											</li>
-											<li>
-													<a href="//infocourse.SMG.bg/aboutus.php#authors">
-															Автори на проекта
-													</a>
-											</li>
-									</ul>
-							</li>
-							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
-									<h3 class="list-title">
-											Курсове &amp; Семинари
-									</h3>
-									<hr>
-									<ul class="footer-list">
-											<li>
-													<a href="//infocourse.SMG.bg/trainings/tracks">
-															Тракове
-													</a></li>
-											<li>
-													<a href="//infocourse.SMG.bg/trainings/courses">
-															Курсове
-													</a>
-											</li>
-											<li>
-													<a href="//infocourse.SMG.bg/trainings/seminars">
-															Семинари
-													</a>
-											</li>
-									</ul>
-							</li>
-							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
-									<h3 class="list-title">
-											Партньори
-									</h3>
-									<hr>
-									<ul class="footer-list">
-											<li>
-													<a target="_blank" href="https://delta.bg/">
-															Delta.BG
-													</a>
-											</li>
-											<li>
-													<a target="_blank" href="http://www.vrexpress.bg/">
-															VR Express
-													</a>
-											</li>
-											<li>
-													<a target="_blank" href="https://consent.io/">
-															Consent.io
-													</a>
-											</li>
-											<li>
-													<a target="_blank" href="http://www.igreet.co/">
-															iGreet
-													</a>
-											</li>
-									</ul>
-							</li>
-							<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
-									<ul class="social">
-											<li><a href="https://facebook.com/TechEducationGroup/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-facebook"></span></a></li>
-											<li><a href="https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ" target="_blank" class="icon-btn"><span class="fa fa-2x fa-youtube-play"></span></a></li>
-											<li><a href="http://github.com/TechEducationPlusPlus/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-github"></span></a></li>
-									</ul>
-									<div class="all-rights-reserved">
-											<p>&copy; 2017 TechEdu ++</p>
-											<p>Всички права запазени.</p>
-											<p> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png"></a></p>
+		<div class="jumbotron bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="https://studyabroad.bg/wp-content/uploads/2017/06/smg_logo.jpg" class="img-fluid img-thumbnail">
+					</div>
+					<div class="col-md-9">
+						<center>
+							<div class="school-name">Софийската математическа гимназия<br>"Паисий Хилендарски"</div>
+						</center>
+						<label class="text-secondary float-right" style="font-size: 14px;">Официален сайт на СМГ</label>
+					</div>
+				</div>
+				<nav class="navbar navbar-expand-xl navbar-light bg-light">
+					<div class="">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"><a href="/" class="nav-link">Начало</a></li>
+								<li class="nav-item"><a href="/news.php" class="nav-link">Новини</a></li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="about" role="button" aria-haspopup="true" aria-expanded="false">За училището</a>
+									<div class="dropdown-menu" aria-labelledby="about">
+										<a class="dropdown-item" href="history.php">История</a>
+										<a class="dropdown-item" href="administration.php">Ръководство</a>
+										<a class="dropdown-item" href="budjet.php">Бюджет</a>
+										<a class="dropdown-item" href="http://sop.bg/smg-58/">Профил на купувача</a>
+										<a class="dropdown-item" href="uploads/SMG-Pravilnik-ustroistvo-i-deinostta-za-2018-2019.pdf">Вътрешен правилник</a>
+										<a class="dropdown-item" href="uploads/SMG-Etichen-codex-za-2018-2019.pdf">Етичен кодекс</a>
+										<a class="dropdown-item" href="uploads/Strategia razvitie na SMG za 2016-2021.pdf">Стратегия за развитие</a>
+										<a class="dropdown-item" href="uploads/SMG-Pravilnik-bezopasni-uslovia-za-2018-2019.pdf">Правилник за безопасни условия</a>
+										<a class="dropdown-item" href="uploads/SMG-Pravilnik-vytreshen-trudov-red-za-2018-2019.pdf">Правилник за трудов ред</a>
+										<a class="dropdown-item" href="ikd.php">Извънкласни дейности</a>
+										<a class="dropdown-item" href="http://smg.bg/uploads/Sreshtu-terorizma-2018.pdf">Срещу тероризма</a>
 									</div>
-							</li>
-					</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="education" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Обучение</a>
+									<ul class="dropdown-menu" aria-labelledby="education">
+										<li><a class="dropdown-item" href="/uploads/SMG-Programa-predmeti-2018-2019-1-srok.pdf">Програма</a></li>
+
+
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" data-toggle="dropdown" id="plans" href="#">Учебни планове</a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="/uploads/SMG-ucheben-plan-progimnazia-za-2018-2019.pdf">Прогимназиален етап</a></li>
+												<li><a class="dropdown-item" href="/uploads/SMG-ucheben-plan-gimnazia-za-2018-2019.pdf">Гимназиален етап</a></li>
+											</ul>
+										</li>
+										<li><a class="dropdown-item" href="/projects.php">Проекти</a></li>
+										<li><a class="dropdown-item" href="/stipendii.php">Стипендии</a></li>
+										<li><a class="dropdown-item" href="/dzi.php">ДЗИ</a></li>
+										<li><a class="dropdown-item" href="/diplomi.php">Дипломи XII клас</a></li>
+										<li><a class="dropdown-item" href="/consults.php">Консултации</a></li>
+										<li><a class="dropdown-item" href="/uploads/Grafik kontrolni-klasni 17-18-2.pdf">График за контролни</a></li>
+										<li><a class="dropdown-item" href="/uploads/Zaiavlenie%20ot%20roditel.pdf">Заявление</a></li>
+										<li><a class="dropdown-item" href="/uploads/Pri-tormoz-nasilie-2018.pdf">При тормоз/насилие</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="enter" aria-haspopup="true" aria-expanded="false" href="#">Прием</a>
+										<ul class="dropdown-menu" aria-labelledby="enter">
+											<li><a class="dropdown-item" href="/priem.php?cl=4">След IV клас</a></li>
+											<li><a class="dropdown-item" href="/priem.php?cl=7">След VII клас</a></li>
+										</ul>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="/events.php?ev=2">Състезания</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" id="school-life" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Училищен живот</a>
+									<ul class="dropdown-menu" aria-labelledby="school-life">
+										<li><a class="dropdown-item" href="bibliotheque.php">Библиотека</a></li>
+										<li><a class="dropdown-item" href="us.php">Ученически съвет</a></li>
+										<li class="dropdown-submenu">
+											<a class="dropdown-item dropdown-toggle" data-toggle="dropdown" id="clubs" href="#">Клубове</a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="bchk.php">Клуб на БЧК</a></li>
+												<li><a class="dropdown-item" href="belgium.php">Клуб приятели на Белгия</a></li>
+												<li><a class="dropdown-item" href="interact.php">Клуб интеракт</a></li>
+											</ul>
+										</li>
+										<li><a class="dropdown-item" href="tvorchestvo.php">Ученическо творчество</a></li>
+										<li><a class="dropdown-item" href="theater.php">Театрална трупа</a></li>
+										<li><a class="dropdown-item" href="http://vestniksmg.com/">СМГ Вестник</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="public-relations" aria-haspopup="true" aria-expanded="false" href="#">Обществен съвет</a>
+									<ul class="dropdown-menu" aria-labelledby="public-relations">
+										<li><a class="dropdown-item" href="/uploads/pokana_syzdavane.pdf">Покана Създаване</a></li>
+										<li><a class="dropdown-item" href="/pokana-obshtestven_savet.pdf">Покана РС</a></li>
+										<li><a class="dropdown-item" href="pravilnik_obshtestveni_saveti.pdf">Правилник</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nastoqtelstvo.php">Настоятелство</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="courses" href="#">Курсове</a>
+									<ul class="dropdown-menu" aria-labelledby="courses">
+										<li><a class="dropdown-item" href="courses_info.php">Информация</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="/galleries.php?page=0">Медиите</a></li>
+								<li class="nav-item"><a class="nav-link" href="/contacts.php">Контакти</a></li>
+							</ul>
+							<!--<form class="form-inline my-2 my-lg-0">
+								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+							</form>-->
+						</div>
+					</div>
+				</nav>
+				{% block header %}{% endblock %}
 			</div>
-	</footer>
-	<div th:fragment="js">
-			<script src="/js/jquery.min.js"></script>
-			<script src="/js/tether.min.js"></script>
-			<script src="/js/bootstrap.min.js"></script>
-			<script src="/js/material.min.js"></script>
-			<script src="/js/ripples.min.js"></script>
-			<script src="/js/snackbar.min.js"></script>
-			<script src="/js/jquery.nouislider.min.js"></script>
-			<script src="/js/main.js"></script>
-			<script>
-			$('.dropdown-toggle').dropdown();
-			</script>
-	</div>
-	<!-- JS -->
+		</div>
+		<div class="container">
+			{% block content %}{% endblock %}
+		</div>
+		<!-- HTML -->
+		<footer class="footer">
+				<div class="container">
+						<span class="text-muted">&copy; 2018 СМГ "Паисий Хилендарски".<br>Всички права запазени.</span>
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png"></a>
+				</div>
+    </footer>
+		<!-- SCRIPTS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="/static/js/main.js"></script>
 	</body>
 </html>

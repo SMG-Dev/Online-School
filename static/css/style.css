@@ -1,0 +1,44 @@
+.h-200 {
+	height: 400px;
+	width: auto;
+}
+.footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    line-height: 40px;
+    background-color: #f5f5f5;
+}
+
+nav {
+	font-size: 80%;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+.school-name {
+	font-size: 175%;
+}
+
+@media (max-width: 767px) {
+	.school-name {
+		display: none !important;
+	}
+}
