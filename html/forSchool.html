@@ -1,0 +1,142 @@
+{% extends "template.html" %}
+
+{% block title %} СМГ За училището {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	
+    <link rel="stylesheet" href="scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/css/forSchool.css" type="text/css" />
+	
+	<script src="scripts/js/tabs.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+         <button id="leftArrow"></button>
+            <button id="rightArrow"></button>
+        <div class="tabsWrap">
+            <div id="tabs">
+                <a id="tab1-tab" href="#tab1" class="active ripple">ИСТОРИЯ</a>
+                <a id="tab2-tab" href="#tab2" class="ripple">РЪКОВОДСТВО</a>
+                <a id="tab3-tab" href="#tab3" class="ripple">ПРОЕКТИ</a>
+                <a id="tab4-tab" href="#tab4" class="ripple">ПРАВИЛНИЦИ</a>
+                <a id="tab5-tab" href="#tab5" class="ripple">БЮДЖЕТ</a>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div id="tab1">
+                <div class="materialContainer">
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="https://i.imgur.com/nbpYKyt.png" />
+                    </center>
+                </div>
+            </div>
+            <div id="tab2">
+                <div class="materialContainer">
+                    <h1 style="text-align: center; margin-bottom: 15px;">Ръководство</h1>
+                    <div class="membersWrap">
+                        <div class="member">
+                            <div class="memberImage" style="background-image: url(./img/board1.jpg);"></div>
+                            <b>Име</b>
+                            <br>
+                            <i>Титла</i>
+                            <br>
+                            <p>Телефон</p>
+                            <br>
+                        </div>
+                        <div class="member">
+                            <div class="memberImage" style="background-image: url(./img/board2.jpg);"></div>
+                            <b>Име</b>
+                            <br>
+                            <i>Титла</i>
+                            <br>
+                            <p>Телефон</p>
+                            <br>
+                        </div>
+                        <div class="member">
+                            <div class="memberImage" style="background-image: url(./img/board3.jpg);"></div>
+                            <b>Име</b>
+                            <br>
+                            <i>Титла</i>
+                            <br>
+                            <p>Телефон</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3">
+                <div class="materialContainer">
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="https://i.imgur.com/nbpYKyt.png" />
+                    </center>
+                </div>
+            </div>
+            <div id="tab4">
+                <div class="materialContainer">
+                    <a href="./uploads/Pravilnik%20za%20ustroistvo%20i%20deinostta%20za%202017-2018.pdf" target="blank">
+                        <h2>Вътрешен правилник на СМГ</h2>
+                    </a>
+                    <a href="./uploads/Ethichen%20codex%20za%202017-2018.pdf" target="blank">
+                        <h2>Етичен кодекс на СМГ</h2>
+                    </a>
+                    <a href="./uploads/Strategia%20razvitie%20na%20SMG%20za%202016-2021.pdf" target="blank">
+                        <h2>Стратегия за развитие на СМГ</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="tab5">
+                <div class="materialContainer">
+                    <h1>Бюджет</h1>
+                    <ul>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 2-ро тримесечие на 2017г. можете да видите
+                            <a href="./uploads/vtoro3mesechie2017-rotated.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 1-во тримесечие на 2017г. можете да видите
+                            <a href="./uploads/purvo3mesechie2017-rotated.pdf" target="blank">тук</a>
+                        </li>
+                    </ul>
+                    План на бюджета за 2017г. може да видите
+                    <a href="./uploads/plan2017.pdf" target="blank">тук</a>
+                    <ul>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 4-то тримесечие на 2016г. можете да видите
+                            <a href="./uploads/otchet2016.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 3-то тримесечие на 2016г. можете да видите
+                            <a href="./uploads/chetvurto3mesechie2016-rotated.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 2-ро тримесечие на 2016г. можете да видите
+                            <a href="./uploads/budjet_30.06.2016.PDF" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 1-во тримесечие на 2016г. можете да видите
+                            <a href="./uploads/budjet_31.03.2016.PDF" target="blank">тук</a>
+                        </li>
+                    </ul>
+                    Бюджет за 2016г. можете да видите
+                    <a href="./uploads/budjet_2016.PDF" target="blank">тук</a>
+                    <ul>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 4-то тримесечие на 2015г. можете да видите
+                            <a href="./uploads/budjet_31.12.2015.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 3-то тримесечие на 2015г. можете да видите
+                            <a href="./uploads/otchet30.09.2015-rotated.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 2-ро тримесечие на 2015г. можете да видите
+                            <a href="./uploads/otchet2trimesechie2015.pdf" target="blank">тук</a>
+                        </li>
+                        <li>Бюджет и отчет за касово изпълнение на бюджета за 1-во тримесечие на 2015г. можете да видите
+                            <a href="./uploads/budjet_07.05.2015.PDF" target="blank">тук</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a href="https://sop.bg/smg-58/" target="blank">
+                        <h2>Профил на купувача</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
