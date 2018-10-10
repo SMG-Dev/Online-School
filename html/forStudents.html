@@ -1,0 +1,161 @@
+{% extends "template.html" %}
+
+{% block title %} СМГ За ученици {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	
+    <link rel="stylesheet" href="scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/css/forStudents.css" type="text/css" />
+	
+	<script src="scripts/js/tabs.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<main>
+         <button id="leftArrow"></button>
+        <button id="rightArrow"></button>
+        <div class="tabsWrap">
+            <div id="tabs">
+                <a id="tab1-tab" href="#tab1" class="active ripple">ОБУЧЕНИЕ</a>
+                <a id="tab2-tab" href="#tab2" class="ripple">БИБЛИОТЕКА</a>
+                <a id="tab3-tab" href="#tab3" class="ripple">КЛУБОВЕ</a>
+                <a id="tab4-tab" href="#tab4" class="ripple">СТИПЕНДИИ</a>
+                <a id="tab5-tab" href="#tab5" class="ripple">12. КЛАС</a>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div id="tab1">
+                <div class="materialContainer">
+                    <h1>Програма</h1>
+                    <p>
+                        Уважаеми посетители, програмата за втория срок на учебната 2015/2016 година можете да изтеглите от
+                        <a href="./uploads/">тук.</a>
+                    </p>
+                    <hr>
+                    <a href="./uploads/Grafik%20kontrolni%20i%20klasni%20za%202016-2017.pdf" target="blank">
+                        <h2>График за контролни</h2>
+                    </a>
+                </div>
+                <div class="parallaxContainer">
+                    <div class="parallax" style="background-image: url(./img/forStudentsParallax.png);"></div>
+                    <div class="mobParallax" style="background-image: url(./img/forStudentsParallax.png);"></div>
+                </div>
+                <div class="materialContainer">
+                    <h1>Учебни планове</h1>
+                    <ul class="sections">
+                        <li>
+                            <a id="content1-tab" class="ripple" href="#content1">Прогимназиален етап до 2015/2016</a>
+                            <div id="content1">
+                                Tab 1
+                            </div>
+                        </li>
+                        <li>
+                            <a id="content2-tab" class="ripple" href="#content2">Гимназиален етап до 2015/2016</a>
+                            <div id="content2">
+                                Tab2
+                            </div>
+                        </li>
+                        <li>
+                            <a id="content3-tab" class="ripple" href="#content3">Прогимназиален етап от 2016/2017</a>
+                            <div id="content3">
+                                Tab3
+                            </div>
+                        </li>
+                        <li>
+                            <a id="content4-tab" class="ripple" href="#content4">Гимназиален етап от 2016/2017</a>
+                            <div id="content4">
+                                Tab4
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a href="./uploads/konsultacii-16-17-2.pdf" target="blank">
+                        <h2>График на консултациите с учителите от СМГ</h2>
+                    </a>
+                </div>
+            </div>
+            <div id="tab2">
+                <div class="materialContainer">
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="https://i.imgur.com/nbpYKyt.png" />
+                    </center>
+                </div>
+            </div>
+            <div id="tab3">
+                <div class="materialContainer">
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="https://i.imgur.com/nbpYKyt.png" />
+                    </center>
+                </div>
+            </div>
+            <div id="tab4">
+                <div class="materialContainer">
+                    <h1>Стипендии – първи срок 2017/2018 учебна година</h1>
+                    <p>
+                        Уважаеми ученици,
+                        <br>
+                        <br> От тази година право на стипендия имат и учениците от 8 клас в СМГ.
+                        <br>
+                        <br> Срокът за предаване на заявленията Ви за получаване на стипендия за първия срок на учебната 2017/2018
+                        година на класните Ви ръководители е
+                        <b>10 ноември 2017 г.</b>
+                        <br>
+                        <br>
+
+                        <b>Заявление за 8 клас</b> изтеглете
+                        <a href="./uploads/17_18_molba-stipendii_ucheniciVIII.docx">ТУК.</a>
+                        <br>
+                        <br>
+
+
+                        <b>Заявление за 10, 11 и 12 клас</b> изтеглете
+                        <a href="./uploads/17_18_molba-stipendii_ucheniciX,XI,XII.docx">ТУК.</a>
+                        <br>
+                        <br> Декларираната информация за успех, отсъствия и наказания на ученика се отнася за учебната 2016/2017
+                        година.
+                        <br>
+                        <br> Класните ръководители могат да изтеглят бланките си
+                        <a href="./uploads/17_18_spisuk-stipendii_klasen_rukovoditel.doc" target="blank">ТУК.</a>
+                        <br>
+                        <br> Правилата за отпускане на стипендии на ученици след завършено основно образование в СМГ "Паисий
+                        Хилендарски" може да прочетете
+                        <a href="./uploads/Stipendii_2017_2018_Pravila.pdf" target="blank">ТУК.</a>
+                    </p>
+                </div>
+            </div>
+            <div id="tab5">
+                <div class="materialContainer">
+                    <h1>ДЗИ</h1>
+                    <p>
+                        Уважаеми родители и ученици,
+                        <br>
+                        <br> График за провеждате на държавните зрелостни изпити през учебната 2015/2016 г. можете да видите
+                        <a href="./uploads/Grafik-DZI-2016-2017.pdf" target="blank">ТУК(.pdf)</a>
+                        или
+                        <a href="./uploads/grafik-DZI-2016-2017.doc">ТУК(.doc).</a>
+                    </p>
+                </div>
+                <div class="parallaxContainer">
+                    <div class="parallax" style="background-image: url(./img/forStudentsParallaxTab5.png);"></div>
+                    <div class="mobParallax" style="background-image: url(./img/forStudentsParallaxTab5.png);"></div>
+                </div>
+                <div class="materialContainer">
+                    <h1>ДЗИ</h1>
+                    <p>
+                        Уважаеми родители и ученици,
+                        <br>
+                        <br> График за провеждате на държавните зрелостни изпити през учебната 2015/2016 г. можете да видите
+                        <a href="./uploads/Grafik-DZI-2016-2017.pdf" target="blank">ТУК(.pdf)</a>
+                        или
+                        <a href="./uploads/grafik-DZI-2016-2017.doc">ТУК(.doc).</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+		</main>
+{% endblock %}
+
