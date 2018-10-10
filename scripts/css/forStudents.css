@@ -1,0 +1,72 @@
+
+
+/*---------------------SECTIONS-------------------*/
+
+.sections
+{
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+}
+
+.sections li 
+{
+	background-color:rgba(0, 0, 0, .13);
+	line-height: 150%;
+	font-size: 100%;
+	color: rgba(0, 0, 0, 0.87);
+	height: 50px;
+	list-style: none;
+	overflow: hidden;
+
+}
+
+.sections li a
+{
+	height: 100%;
+	position: relative;
+	padding-left: 20px;
+	overflow: hidden;
+	width: calc(100% - 20px);
+	display: block;
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 120%;
+	color: rgba(0, 0, 0, 0.87);
+
+}
+
+.sections li div
+{
+	height: 0;
+	font-size: 0;
+}
+
+.sections li:first-child
+{
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.sections li:last-child
+{
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.sections li a:hover
+{
+	background-color: rgba(0, 0, 0, .17);
+	color: #fff;
+}
+
+.sections .ripple .wave
+{
+	background-color:rgba(0, 0, 0, .4);
+}
+
+@media only screen and (max-width: 1000px)
+{
+
+}

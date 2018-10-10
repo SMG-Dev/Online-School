@@ -1,0 +1,82 @@
+main
+{
+    width: 100%;
+    padding: 0;
+    color: rgba(0, 0, 0, .87);
+    background-color: transparent;
+    margin:0;
+}
+
+h1
+{
+    font-size: 180%;
+    font-weight: 500;
+    line-height: 180%;
+    margin: -5px 0 10px 0;
+    color: rgba(0, 0, 0, .8);
+}
+.materialContainer
+{
+    width: 70%;
+    background-color: #fff;
+    height: auto;
+    margin: 0;
+    padding: 30px 15% 30px 15%;
+    -webkit-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.63);
+    box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.63);
+    font-size: 100%;
+    overflow: hidden;
+    line-height: 150%;
+}
+
+.italics
+{
+    font-style: italic;
+    padding-left: 10px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.padded
+{
+    padding-left: 20px;
+}
+.materialContainer a
+{
+    text-decoration: underline;
+    color: var(--accentColor);
+}
+
+.materialContainer a:hover
+{
+    opacity: .5;
+}
+
+h2:hover
+{
+    opacity: .5;
+}
+@media only screen and (max-width: 1000px)
+{
+    .materialContainer
+    {
+        width: 80%;
+        padding: 20px 10%;
+    }
+
+    .parallaxContainer
+    {
+        height: 200px;
+    }
+
+    h1 
+    {
+        font-size: 150%;
+        line-height: 150%;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+
+}

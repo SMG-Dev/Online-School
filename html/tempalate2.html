@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/scripts/css/body.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/footer.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/parallax.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/ripple.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/js/header.js" type="text/javascript"></script>
+    <script src="/scripts/js/parallax.js" type="text/javascript"></script>
+    <script src="/scripts/js/ripple.js" type="text/javascript"></script>
+
+    <link rel="icon" type="image/png" href="/img/icons/favicon.png" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--------------HEADER-------------->
+    <header>
+        <div class="logo">
+            <a href="./index.html" title="Начало"></a>
+        </div>
+        <button class="ripple inactive" id="burger">Меню</button>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="./news.html" class="ripple" title="Новини">
+                        <div style="background-image: url(/img/icons/news.png);"></div>
+                        <span class="menuText">Новини</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="./forStudents.html" class="ripple" title="За ученици">
+                        <div style="background-image: url(/img/icons/forStudents.png);"></div>
+                        <span class="menuText">За ученици</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="./forSchool.html" class="ripple" title="За училището">
+                        <div style="background-image: url(/img/icons/forSchool.png);"></div>
+                        <span class="menuText">За училището</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="./admission.html" class="ripple" title="Прием">
+                        <div style="background-image: url(/img/icons/admission.png);"></div>
+                        <span class="menuText">Прием</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="./courses.html" class="ripple" title="Курсове">
+                        <div style="background-image: url(/img/icons/courses.png);"></div>
+                        <span class="menuText">Курсове</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="./organizations.html" class="ripple" title="Организации">
+                        <div style="background-image: url(/img/icons/organizations.png);"></div>
+                        <span class="menuText">Организации</a>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--           CONTENT-------------->
+    <main>	
+				{% block content %} {% endblock %}
+    </main>
+    <!--           -FOOTER-------------->
+    <footer>
+        <div class="footerLeft">
+            <p class="footerHeading">За контакти:
+                <br>
+            </p>
+            Телефон-централа: 02/ 983 1219*
+            <br>
+            <p class="dim">*след свързване с централата наберете един от следните вътрешни номера:
+                <br>
+            </p>
+            <p class="contacts">
+                Директор: 104
+                <br> Пом. директори: 103
+                <br> Секретар: 105
+                <br> Домакин и пом.директор АСД: 102
+                <br> Мед. кабинет: 106
+                <br> Охрана: 107
+                <br>
+                <br>
+            </p>
+            Курсове (информация, записване и др.): 02/ 983 92 14
+            <br>
+            <p>e-mail:
+                <a href="mailto:info@smg.bg">info@smg.bg</a>
+            </p>
+            <br>
+        </div>
+        <div class="footerRight">
+            <p class="footerHeading"> Адрес:</p>
+            <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJExiaP3uFqkAR0TAxgmsUJEI&key=AIzaSyBIOEIXe0ASph3x58nP6PqtR6T8dFmqQRA"
+                allowfullscreen></iframe>
+        </div>
+        <div class="footerCopyright">
+            &copy; 2018 СМГ "Паисий Хилендарски". Всички права са запазени.
+        </div>
+        <div class="report">
+            <a href="mailto:smg.report.bug@gmail.com?Subject=Dokladvane%20na%20problem" class="ripple">Докладвайте проблем тук.
+                <span style="opacity:0.5">Моля опишете проблема с детайли и прикачете снимки.</span>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
+

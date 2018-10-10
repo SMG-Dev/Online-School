@@ -1,0 +1,188 @@
+nav
+{
+	box-shadow: none;
+}
+
+.hide 
+{
+	display: none;
+}
+
+.tabsContent.fixed
+{
+	margin-top: 60px;
+}
+
+.tabsContent.fixedLittle
+{
+	margin-top: 60px;
+	width: 100%
+}
+
+.tabsContent 
+{
+	width: 100%;
+	padding: 0;
+}
+
+.tabsWrap
+{
+	box-shadow: 0 1px 10px rgba(0,0,0,0.19), 0 5px 10px rgba(0,0,0,0.23);
+	height: 60px;
+	position: relative;
+	background-color: rgb(26, 35, 115);
+	z-index: 6;
+}
+
+.tabsWrap.fixed
+{
+	position:fixed;
+	top: 90px;
+	width: 100%;
+	display: block;
+	margin-top: 0;
+}
+
+#tabs 
+{
+	position: relative;
+	display: block;
+    padding: 0;
+	height: 60px;
+	width: auto;
+	margin: 0 auto;
+	z-index: 10;
+	
+}
+
+.tabsWrap 
+{
+	overflow-y: scroll;
+    -ms-overflow-style: none; 
+    overflow: -moz-scrollbars-none; 
+}
+
+.tabsWrap::-webkit-scrollbar 
+{ 
+	display: none;
+}
+
+#tabs a 
+{
+	position: relative;
+    text-decoration: none;
+	display: block;
+	float: left;
+    height: 60px;
+    line-height: 60px;
+	font-size: 100%;
+	font-weight: 500;
+	color: rgba(256, 256, 256, 0.7);
+	text-align: center;
+    outline: none;
+	overflow: hidden;
+	-webkit-transition: ease-in-out .2s;
+	-moz-transition: ease-in-out .2s;
+	-o-transition: ease-in-out .2s;
+	-ms-transition: ease-in-out .2s;
+	transition: ease-in-out .2s;
+	width: auto;
+	padding: 0 50px;
+}
+
+
+#tabs>a.active 
+{
+	outline:none;
+	color: rgba(256, 256, 256, 1);
+	background-color: transparent;
+}
+
+#tabs>a:not(.active):hover 
+{
+	background-color: rgba(256, 256, 256, 0.2);
+}
+
+.bar 
+{
+	position: absolute;
+	padding: 0;
+	z-index: 6;
+	bottom: 0;
+	height: 3px;
+	background: rgb(256, 256, 256);
+	display: block;
+	left: 0;
+	transition: left .2s ease;
+    -webkit-transition: left .2s ease;
+}
+
+#leftArrow,
+#rightArrow
+{
+	display: none;
+}
+
+.bar 
+{
+	position: absolute;
+	padding: 0;
+	z-index: 6;
+	bottom: 0;
+	height: 3px;
+	background: rgb(256, 256, 256);
+	display: block;
+	left: 0;
+	transition: left .2s ease;
+    -webkit-transition: left .2s ease;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	#leftArrow, 
+	#rightArrow 
+	{
+		position: absolute;
+		background-color: transparent;
+	
+		height: 60px;
+		width: 40px;
+		z-index: 11;
+	}
+
+	#leftArrow.fixed,
+	#rightArrow.fixed
+	{
+		position: fixed;
+		top: 0;
+	}
+
+	#leftArrow 
+	{
+		left: 0;
+		height: 57px;
+		background-image: url(./../../img/icons/tabsArrowLeft.png);
+	}
+
+	#rightArrow
+	{
+		right: 0;
+		background-image: url(./../../img/icons/tabsArrowRight.png);		
+	}
+
+	#tabs a 
+	{
+		padding: 0 40px;
+		font-size: 85%;
+	}
+
+	.tabsWrap.fixed
+	{
+		top: 0;
+	}
+
+	.tabsContent.fixed
+	{
+		margin-top: 360px;
+	}
+}

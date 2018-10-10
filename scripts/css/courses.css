@@ -1,0 +1,17 @@
+
+.blueBackgroundText
+{
+	background-color: rgba(26, 35, 105, 0.5);
+	color: rgba(256, 256, 256, 0.8);
+	padding: 50px;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.blueBackgroundText
+	{
+		padding: 20px;
+
+	}
+}

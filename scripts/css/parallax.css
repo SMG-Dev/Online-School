@@ -1,0 +1,47 @@
+.parallaxContainer 
+{
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+}
+
+.parallax 
+{
+	position: absolute;
+	height: 200%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+
+.mobParallax
+{
+	display:none;
+	height: 250px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -1;
+	position: absolute;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.mobParallax
+	{
+		display:block;
+	}
+
+	.parallax
+	{
+		display:none;
+	}
+
+	.parallaxContainer
+	{
+		height: 250px;
+	}
+}

@@ -1,0 +1,143 @@
+footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: var(--accentColor);
+    position: relative;
+    color: #fff;
+    background-image: url(../../img/backgroundTexture.png);
+    box-shadow: 0 -1px 10px rgba(0,0,0,0.19), 0 -5px 10px rgba(0,0,0,0.23);
+
+}
+
+footer a
+{
+    text-decoration: underline;
+}
+footer a:hover
+{
+    opacity: .5
+}
+
+.footerLeft,
+.footerRight
+{
+    height: 210px;
+    width: 44%;
+    float: left;
+    position: relative;
+    padding: 20px 3%;
+    font-size: 80%;
+}
+
+
+.footerLeft
+{
+    
+    padding-left: 10%;
+    width: 37%
+}
+
+.footerHeading
+{
+    font-size: 150%;
+    padding-bottom: 10px;
+}
+
+
+.contacts
+{
+    padding-left: 30px;
+}
+
+.dim
+{
+    color: rgba(256, 256, 256, 0.5);
+}
+.footerCopyright
+{
+    width: 100%;
+    height: 50px;
+    float: none;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: rgba(256, 256, 256, 0.5);
+    line-height: 55px;
+    text-align: center;
+    font-size: 75%;
+    overflow: hidden;
+}
+
+footer iframe
+{
+    height: 180px;
+    width: 80%;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    footer iframe
+    {
+        width: 100%;
+    }
+    footer
+    {
+        height: auto;
+    }
+    .footerLeft,
+    .footerRight
+    {
+        width: 90%;
+        padding: 20px 5% 0 5%;
+        float: none;
+        height: auto;
+    }
+    
+    .footerCopyright
+    {
+        font-size: 70%;
+        margin-top: 20px;
+    }
+
+    .footerHeading
+    {
+        font-size: 120%;
+    }
+
+    .dim,
+    .contacts
+    {
+        font-size: 90%;
+    }
+}
+
+/* ====== REPORT A BUG ======= */
+
+.report
+{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(141, 1, 1);
+    position: relative;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.report a
+{
+    text-decoration: none;
+    display: block;
+}
+
+.report a .wave
+{
+    background-color:rgba(256, 256, 256, .5);
+}
+
+.report a:hover
+{
+    opacity: 1;
+}

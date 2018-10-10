@@ -1,0 +1,278 @@
+header
+{
+	background-color:  var(--accentColor);
+	height: 350px;
+	width: 100%;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-image: url(../../img/backgroundTexture.png);
+}
+
+.logo
+{
+	width: 100%;
+	height: 60%;
+	background-image: url(../../img/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.logo a
+{
+	width: 60%;
+	height: 100%;
+	margin: 0 20% 0 20%;
+	display: block;
+}
+
+#burger
+{
+	display: none;
+}
+
+nav
+{
+	width: 100%;
+	height: 160px;
+	margin-top: -20px;
+	position: absolute;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	z-index: 5;
+} 
+
+nav.fixed 
+{
+	position:fixed;
+	top: 0;
+	margin: 0;
+	height: 90px;
+	background-image: url(../../img/backgroundTexture.png);
+	background-size: contain;
+	background-color: var(--accentColor);
+}
+
+nav ul
+{
+	width: 70%;
+	margin: 0 15% 0 15%;
+	height: 100%;
+	padding: 0;
+}
+
+nav ul.fixed 
+{
+	width: 800px;
+	margin: 0 auto 0 auto;
+}
+
+nav li
+{
+	list-style: none;
+	float: left;
+	height: 100%;
+	width: -webkit-calc(100%/6.001);
+	width: expression(100%/6.001);
+	width: -moz-calc(100%/6.001);
+	width: -o-calc(100%/6.001);
+	width: calc(100%/6.001);
+}
+
+nav li a
+{
+	width: 100%;
+	height: 137px;
+	display: block;
+	overflow: hidden;
+	position:relative;
+	padding-top: 23px;
+	bottom: 0;
+	color: rgba(256, 256, 256, 0.8);
+	text-align: center;
+	border-radius: 5px;
+	
+	-webkit-transition: ease-in-out .1s;
+	-moz-transition: ease-in-out .1s;
+	-o-transition: ease-in-out .1s;
+	-ms-transition: ease-in-out .1s;
+	transition: ease-in-out .1s;
+}
+
+nav li a.fixed
+{
+	height: 81px;
+	padding-top: 9px;
+}
+
+.menuText
+{
+	width: 100%;
+	position: absolute;
+	bottom: 13%;
+	left: 0;
+	text-align: center;
+	font-size: 125%;
+}
+
+.menuText.fixed 
+{
+	display: none;
+}
+
+nav li a div
+{
+	height: 60%;
+	width: 100%;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center;
+}
+
+nav li a div.fixed
+{
+	height: 90%;
+}
+
+nav li a:hover
+{
+	background-color: rgba(256, 256, 256, 0.2);
+	color: #fff;
+}
+
+.active
+{
+	background-color: rgba(256, 256, 256, 0.2);
+	color: #fff;
+	pointer-events: none;
+	cursor: default;
+}
+
+@media only screen and (max-width: 1300px)
+{
+	nav ul
+	{
+		width: 100%;
+		margin: 0;
+	}
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+	header
+	{
+		height: 160px;
+		margin-bottom: -1px;
+	}
+
+	nav
+	{
+		box-shadow: none;
+	}	
+
+	.logo
+	{
+		height: 67%;
+	}
+
+	
+	.logo a
+	{
+		width: 80%;
+		height: 80%;
+		margin: 0 10% 0 10%;
+	}
+		
+	#burger
+	{
+		display: block;
+		height: 45px;
+		width: 150px;
+		padding-left: 30px;
+		margin: 0 auto 0 auto;
+		position: relative;
+		overflow: hidden;
+		color: #fff;
+		font-size: 120%;
+		background-color: transparent;
+		background-image: url(../../img/icons/appsIcon.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	#burger:hover
+	{
+		background-color: rgba(256, 256, 256, .2);
+		cursor: pointer;
+	}
+
+	nav
+	{
+		height: 300px;
+		width: 100%;
+		margin-top: 7px;
+		display: none;
+		background-image: url(../../img/backgroundTexture.png);
+		background-color: var(--accentColor);
+		animation: menuDrop .2s cubic-bezier(0, 0.33, 0.67, 1);
+	}
+
+	@keyframes menuDrop 
+	{
+		100% {
+			height: 300px;
+		}
+		0%
+		{
+			height: 0px;
+		}
+	}
+
+	nav ul li
+	{
+		width: -webkit-calc(100%/3.001);
+		width: expression(100%/3.001);
+		width: -moz-calc(100%/3.001);
+		width: -o-calc(100%/3.001);
+		width: calc(100%/3.001);
+		height: 150px;
+		
+	}
+
+	nav ul li a
+	{
+		height: 127px;
+		animation: liaAnim .2s cubic-bezier(0,0.33,0.67,1);
+	}
+
+	@keyframes liaAnim 
+	{
+		100% 
+		{
+			height: 127px;
+			opacity: 1;
+		}
+		0%
+		{
+			height: 0px;
+			opacity: 0;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 400px)
+{
+	.menuText
+	{
+		font-size: 90%;
+	}
+}
+
+@media only screen and (max-width: 400px)
+{
+	.menuText
+	{
+		font-size: 80%;
+	}
+}

@@ -1,0 +1,19 @@
+.wave 
+{
+	overflow: hidden;
+	background-color: rgba(256, 256, 256, 0.3);
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0);
+	animation: ripple_animation .5s linear;
+}
+
+@keyframes ripple_animation 
+{
+	100% 
+	{
+		background-color: rgba(256, 256, 256, 0.0);
+		transform: scale(4);
+		opacity: 0;
+	}
+}
