@@ -1,7 +1,12 @@
+body {
+	font-family: 'Roboto', sans-serif;	
+}
+
 .h-200 {
 	height: 400px;
 	width: auto;
 }
+
 .footer {
     position: static;
     bottom: 0;
@@ -41,4 +46,88 @@ nav {
 	.school-name {
 		display: none !important;
 	}
+}
+
+@media (max-width:1199px) {
+	.container {
+		width: 94% !important;
+	}
+}
+
+.course-item {
+	background-color: #fff;
+	box-shadow: 0 0 10px #808080;
+	margin: 10px;
+	padding: 1px 10px 1px;
+	border-radius: 5px;
+	position: relative;
+}
+.course-item.col-md-4.equal h2 {
+	height: 50px;
+}
+.course-item.col-md-4.equalBig h2 {
+	height: 140px;
+}
+.course-item .right-arrow {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	margin-top: -11px;
+	margin-left: -36px;
+	background-color: white;
+	color: #009688;
+	border-radius: 100%;
+	font-size: 1em;
+}
+.course-item:hover {
+	background-color: #009688;
+	color: white !important;
+	box-shadow: 0 0 10px #808080;
+	margin: 10px;
+	padding: 1px 10px 1px;
+	border-radius: 5px;
+	position: relative;
+}
+.course-item:hover .right-arrow {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	margin-top: -11px;
+	margin-left: -36px;
+	color: white;
+	background-color: #009688;
+	border-radius: 100%;
+	font-size: 1em;
+}
+.course-item:hover .btn-success {
+	background-color: rgba(255,255,255,.84) !important;
+	color: #009688;
+}
+.course-item.col-md-3>h2 {
+	height: 100px;
+}
+.course-item.col-md-3 {
+	height: 245px;
+}
+.course-item.col-md-4 {
+}
+.course-item.col-md-4 h2 {
+	font-weight: bold;
+}
+ul.row li {
+    list-style: none !important;
+    color: inherit !important;
+}
+ul.row {
+    color: inherit !important;
+}
+ul.footer-list {
+    margin: 0;
+    padding: 0;
 }
