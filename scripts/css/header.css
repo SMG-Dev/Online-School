@@ -230,11 +230,11 @@ nav li a:hover
 
 	nav ul li
 	{
-		width: -webkit-calc(100%/3.001);
-		width: expression(100%/3.001);
-		width: -moz-calc(100%/3.001);
-		width: -o-calc(100%/3.001);
-		width: calc(100%/3.001);
+		width: -webkit-calc(100%/4.001);
+		width: expression(100%/4.001);
+		width: -moz-calc(100%/4.001);
+		width: -o-calc(100%/4.001);
+		width: calc(100%/4.001);
 		height: 150px;
 		
 	}
