@@ -6,6 +6,7 @@
     {{ parent() }}
 	
     <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="{{ root }}/static/css/items.css" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -18,7 +19,7 @@
             <div class="intro">
                 <div>
                     <p class="introTitle">
-                        Добре дошли в уебстраницата на
+                        Добре дошли в системата за тестове на
                         <br>Софийска Математическа Гимназия
                         <br>"Паисий Хилендарски"
                     </p>
@@ -27,38 +28,59 @@
             <div class="introTextWrap">
                 <span class="introText">
                     <i>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum."</i>
-                    <p align="right">- Име Фамилия</p>
-                    </span>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+                    <i>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+                    <i>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+				</span>
             </div>
         </div>
-        <div class="accents">
-            <p class="accentsTitle"></p>
-            <div class="accentsContainer" style="background-image: url(/img/logo_shkolo.png);">
-                <a href="https://app.shkolo.bg/" class="ripple">
-                    <div class="accentsHeading center">
-                        <p>Електронен дневник</p>
-                    </div>
-                </a>
-            </div>
-            <div class="accentsContainer" style="background-image: url(http://infocourse.techedu.bg/img/logo.png);">
-                <a href="#" class="ripple">
-                    <div class="accentsHeading center">
-                        <p>Система за тестове</p>
-                    </div>
-                </a>
-            </div>
-            <div class="accentsContainer" style="background-image: url(/img/articleThree.jpg);">
-                <a href="#" class="ripple">
-                    <div class="accentsHeading center">
-                        <p>СМГ със спортен успех! Първо място на 4x100 м щафета - юноши.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+
+		<br><br>
+
+<div class="container">
+	<div class="card">
+		<h4 class="card-header">Future tests</h4>
+
+		<div class="card-body">
+			{% for contest in future %}
+				<div class="course-item col-md-4">
+					<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
+					<a href="{{ root }}/contests/compete?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a></span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="card">
+		<h4 class="card-header">Live tests</h4>
+
+		<div class="card-body">
+			{% for contest in contests %}
+				<div class="course-item col-md-4">
+					<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
+					<a href="{{ root }}/contests/compete?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a></span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<hr>
+	<div class="card">
+		<h4 class="card-header">Homework</h4>
+		<div class="card-body">
+			{% for contest in homework %}
+				<div class="course-item col-md-4">
+					<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
+					<a href="{{ root }}/contests/compete?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a></span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
 {% endblock %}
 

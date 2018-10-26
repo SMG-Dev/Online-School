@@ -60,6 +60,15 @@ h2:hover
 {
     opacity: .5;
 }
+
+.disabled {
+	cursor: not-allowed;
+	pointer-events: none;
+	/*color: gray;*/
+    opacity: 0.5;
+	display: none;
+}
+
 @media only screen and (max-width: 1000px)
 {
     .materialContainer

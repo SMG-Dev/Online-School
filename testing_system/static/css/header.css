@@ -1,0 +1,17 @@
+.img-logo {
+	max-height: 40px;
+	width: auto;
+}
+
+header nav, header .dropdown-menu {
+	background-color: rgb(26,35,105) !important;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-image: url(../../../img/backgroundTexture.png);
+}
+header .dropdown-item:focus, header .dropdown-item:hover {
+	background-color: rgb(36,45,115) !important;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+header nav *, header .dropdown-menu {
+	color: white !important;
+}

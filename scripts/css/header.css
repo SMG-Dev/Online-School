@@ -70,11 +70,11 @@ nav li
 	list-style: none;
 	float: left;
 	height: 100%;
-	width: -webkit-calc(100%/7.001);
-	width: expression(100%/7.001);
-	width: -moz-calc(100%/7.001);
-	width: -o-calc(100%/7.001);
-	width: calc(100%/7.001);
+	width: -webkit-calc(100%/6.001); /* 6 е броя на табовете в header-а */
+	width:   expression(100%/6.001);
+	width:    -moz-calc(100%/6.001);
+	width:      -o-calc(100%/6.001);
+	width:         calc(100%/6.001);
 }
 
 nav li a

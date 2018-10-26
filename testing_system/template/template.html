@@ -1,0 +1,124 @@
+{% set root = '/testing_system' %}
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+	  {% block head %}
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+			<link href="{{ root }}/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+			<link href="{{ root }}/static/css/footer.css" rel="stylesheet">
+			<link href="{{ root }}/static/css/header.css" rel="stylesheet">
+			<link rel="stylesheet" href="/scripts/css/parallax.css" type="text/css" />
+			<link rel="stylesheet" href="/scripts/css/ripple.css" type="text/css" />
+			<script src="/scripts/js/parallax.js" type="text/javascript"></script>
+			<script src="/scripts/js/ripple.js" type="text/javascript"></script>
+
+			<link rel="icon" type="image/png" href="/img/icons/favicon.png" />
+		{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--------------HEADER-------------->
+    <header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+		  <a class="navbar-brand" href="#">
+			<img class="img-logo" src="{{ root }}/static/img/logo_techedu.png">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="{{ root }}">Начало</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Предмети
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="">Информатика</a>
+				  <a class="dropdown-item" href="#">Математика</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="#">Школи</a>
+				</div>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" href="https://app.shkolo.bg">Ел. Дневник</a>
+			  </li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		  </div>
+		</div>
+		</nav>
+    </header>
+    <!--           CONTENT-------------->
+    <main>	
+				{% block content %} {% endblock %}
+    </main>
+
+	<br><br>
+
+    <!--           -FOOTER-------------->
+	<footer>
+		<div class="container container-holder">
+			<ul class="row">
+				<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+					<h3 class="list-title">TechEdu ++</h3>
+					<hr>
+					<ul class="footer-list">
+						<li><a href="//infocourse.techedu.bg/aboutus.php">За нас</a></li>
+						<li><a href="//infocourse.techedu.bg/aboutus.php#trainers">Лектори</a></li>
+						<li><a href="//infocourse.techedu.bg/aboutus.php#authors">Автори на проекта</a></li>
+					</ul>
+				</li>
+				<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+					<h3 class="list-title">Видео уроци</h3>
+					<hr>
+					<ul class="footer-list">
+						<li><a href="//infocourse.techedu.bg/trainings/tracks">Тракове</a></li>
+						<li><a href="//infocourse.techedu.bg/trainings/courses">Курсове</a></li>
+						<li><a href="//infocourse.techedu.bg/trainings/seminars">Семинари</a></li>
+					</ul>
+				</li>
+				<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+					<h3 class="list-title">Партньори</h3>
+					<hr>
+					<ul class="footer-list">
+						<li><a target="_blank" href="https://delta.bg/">Delta.BG</a></li>
+						<li><a target="_blank" href="http://www.vrexpress.bg/">VR Express</a></li>
+						<li><a target="_blank" href="https://consent.io/">Consent.io</a></li>
+						<li><a target="_blank" href="http://www.igreet.co/">iGreet</a></li>
+					</ul>
+				</li>
+				<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
+					<ul class="social">
+						<li><a href="https://facebook.com/TechEducationGroup/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-facebook"></span></a></li>
+						<li><a href="https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ" target="_blank" class="icon-btn"><span class="fa fa-2x fa-youtube-play"></span></a></li>
+						<li><a href="http://github.com/TechEducationPlusPlus/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-github"></span></a></li>
+					</ul>
+					<div class="all-rights-reserved">
+						<p>&copy; 2017 TechEdu ++</p>
+						<p>Всички права запазени.</p>
+						<p> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png"></a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="{{ root }}/vendor/twbs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+
+</html>
+

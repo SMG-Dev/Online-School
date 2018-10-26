@@ -1,0 +1,18 @@
+.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 32.3%;
+    flex: 0 0 32.3%;
+    max-width: 32.3%;
+}
+.course-item {
+	background-color: #fff; 
+	box-shadow: 0 0 5px #808080; 
+	margin: 5px; 
+	padding: 5px 5px 5px; 
+	border-radius: 5px;
+	position: relative;
+}
+.course-item .btn {
+	position: relative;
+	bottom: 0;
+}

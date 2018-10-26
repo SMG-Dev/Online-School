@@ -1,0 +1,50 @@
+footer {
+	background-color: rgb(26,35,105) !important;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background-image: url(../../../img/backgroundTexture.png);
+	bottom: 0px;
+	position: static;
+	width: 100%;
+	/*background-color: transparent;*/
+	padding: 45px 0;
+	color: white;
+}
+footer hr {
+	background: white;
+}
+footer ul.row li {
+    list-style: none;
+	color: inherit !important;
+}
+footer ul.row a {
+	text-decoration: none;
+	color: inherit !important;
+}
+footer .list-title {
+	color: white;
+}
+footer ul.row {
+	color: inherit !important;
+}
+footer ul.footer-list {
+	margin: 0;
+	padding: 0;
+}
+footer ul.social {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 17px;
+	list-style: none;
+	content: '';
+	display: table;
+	clear: both;
+}
+footer ul.social li {
+	display: inline;
+    list-style: none;
+	padding: 5px 5px 5px 5px;
+}
+footer .container.container-holder {
+	background-color: transparent !important;
+}
+
