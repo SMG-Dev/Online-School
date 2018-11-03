@@ -1,0 +1,91 @@
+{% extends "template.html" %}
+
+{% block title %} Софийската математическа гимназия "Паисий Хилендарски" {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	
+    <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="{{ root }}/static/css/items.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+        <div class="parallaxContainer">
+            <div class="parallax"></div>
+            <div class="mobParallax"></div>
+        </div>
+
+        <div class="introWrap">
+            <div class="intro">
+                <div>
+                    <p class="introTitle">
+						{{ name }}
+					</p>
+                </div>
+            </div>
+            <div class="introTextWrap">
+                <span class="introText">
+					<p>	{{ description }} </p>
+					<p style="text-align: right;font-size: 1em;" id="timer"></p>
+				</span>
+            </div>
+        </div>
+
+		<br><br>
+
+<div class="container">
+	<form id="form" method="get" action="/contests/submit.php" class="row">
+		{% for task in tasks %}
+		<div class="card container">
+			<h4 class="card-header">{{task.Name}}</h4>
+
+			<div class="card-body">
+				{{task.Description | raw}}
+			</div>
+		</div>
+		{% endfor %}
+		<div class="card container">
+			<h4 class="card-header">Проверете си отговорите и ако сте готови предайте с натискане на бутона „Предавам“</h4>
+
+			<div class="card-body">
+				{{task.Description | raw}}
+				<input type="submit" value="Предавам"></input> 
+			</div>
+		</div>
+	</form>
+</div>
+
+<script type="text/javascript">
+	let start = "{{ start }}";
+	let end = new Date ("{{ end }}");
+	let now = new Date ();
+
+	function format_number (f, digits) {
+		return ("0000" + f).slice (-digits); 
+	}
+
+	function format_date_diff (milisec) {
+		return "Остават " + parseInt (milisec / 1000 / 60 / 60 / 24) + " дни " + parseInt (milisec / 1000 / 60 / 60 % 24) + ":"  + format_number (parseInt (milisec / 1000 / 60 % 60), 2) + ":" + format_number (parseInt (milisec / 1000) % 60, 2) + " ч. до края";
+	}
+
+	setInterval (function () { 
+		document.getElementById ('timer').innerText = format_date_diff(parseInt (end - (new Date ())));
+	}, 100);
+</script>
+
+{% endblock %}
+
+{% block js %} 
+	<script type="text/javascript">
+		$(document).ready(function(){
+				document.getElementById("form").reset ();
+				$( "form" ).submit(function( event ) {
+				  console.log( $( this ).serializeArray() );
+				  //event.preventDefault();
+				});
+		});
+	</script>
+{% endblock %} 
+
+
+

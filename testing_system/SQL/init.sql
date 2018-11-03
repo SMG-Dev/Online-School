@@ -23,14 +23,14 @@ CREATE TABLE `smg`.`Contest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `Contest`(`ID`, `Name`, `Tasks`, `AccessToken`, `live`, `start`, `end`) VALUES
-					(NULL, 'Future contest in Bulgarian', "[]", "", "1", '2018-10-26 19:50:21', '2018-10-26 19:50:21'),
-					(NULL, 'Live contest in Bulgarian', "[]", "", "1", '2018-10-26 18:50:21', '2018-10-26 19:50:21'),
-					(NULL, 'Homework in Informatics', "[]", "", "0", '2018-10-26 17:50:21', '2018-10-26 20:50:21'),
-					(NULL, 'Archive homework in Informatics', "[]", "", "0", '2018-10-26 17:50:21', '2018-10-26 18:50:21');
+					(NULL, 'Future contest in Bulgarian', "[]", "", "1", '2018-10-26 19:50:21', '2018-10-26 19:50:21')
+					,(NULL, 'Live contest in Bulgarian', "[]", "", "1", '2018-10-26 18:50:21', '2018-10-26 19:50:21')
+					,(NULL, 'Homework in Informatics', "[]", "", "0", '2018-10-26 17:50:21', '2018-10-26 20:50:21')
+					,(NULL, 'Archive homework in Informatics', "[]", "", "0", '2018-10-26 17:50:21', '2018-10-26 18:50:21')
+					,(NULL, 'Infinite contest in Informatics', "[]", "", "1", '2019-10-26 17:50:21', '3019-10-26 18:50:21')
+					,(NULL, 'Infinite homework in Informatics', "[]", "", "0", '2019-10-26 17:50:21', '3000-10-26 18:50:21')
+					,(NULL, 'Infinite future contest in Informatics', "[]", "", "1", '2019-10-26 17:50:21', '2018-10-26 18:50:21')
+					;
 
 
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

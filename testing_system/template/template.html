@@ -14,6 +14,7 @@
 			<script src="/scripts/js/ripple.js" type="text/javascript"></script>
 
 			<link rel="icon" type="image/png" href="/img/icons/favicon.png" />
+			<link rel="stylesheet" href="{{ root }}/static/node_modules/@fortawesome/fontawesome-free/css/all.css">
 		{% endblock %}
     <title>{% block title %}{% endblock %}</title>
     <meta charset="utf-8" />
@@ -102,14 +103,14 @@
 				</li>
 				<li class="col-md-3 col-sm-12 col-xs-12 footer-list-wrapper">
 					<ul class="social">
-						<li><a href="https://facebook.com/TechEducationGroup/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-facebook"></span></a></li>
-						<li><a href="https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ" target="_blank" class="icon-btn"><span class="fa fa-2x fa-youtube-play"></span></a></li>
-						<li><a href="http://github.com/TechEducationPlusPlus/" target="_blank" class="icon-btn"><span class="fa fa-2x fa-github"></span></a></li>
+						<li><a href="https://facebook.com/TechEducationGroup/" target="_blank" class="icon-btn"><i class="fab fa-2x fa-facebook-f"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ" target="_blank" class="icon-btn"><span class="fab fa-2x fa-youtube"></span></a></li>
+						<li><a href="http://github.com/TechEducationPlusPlus/" target="_blank" class="icon-btn"><span class="fab fa-2x fa-github"></span></a></li>
 					</ul>
 					<div class="all-rights-reserved">
 						<p>&copy; 2017 TechEdu ++</p>
 						<p>Всички права запазени.</p>
-						<p> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png"></a></p>
+						<p> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/in/"><img alt="Creative Commons License" style="border-width:0" src="{{ root }}/static/img/88x31.png"></a></p>
 					</div>
 				</li>
 			</ul>
@@ -118,6 +119,8 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="{{ root }}/vendor/twbs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	{% block js %} 
+	{% endblock %} 
 </body>
 
 </html>
