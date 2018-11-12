@@ -23,6 +23,11 @@
 			$this->conn->close ();
 		}
 
+		function insert_id ()
+		{
+			return $this->conn->insert_id;
+		}
+
 		function prepare (string $command)
 		{
 			return ($this->conn->prepare($command));

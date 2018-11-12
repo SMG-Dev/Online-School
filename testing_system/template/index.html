@@ -43,44 +43,50 @@
 		<br><br>
 
 <div class="container">
-	<div class="row">
-		<div class="card container">
-			<h4 class="card-header">Live tests</h4>
+	<div class="card">
+		<h4 class="card-header">Live tests</h4>
 
-			<div class="card-body row">
-				{% for contest in contests %}
-					<div class="course-item col-md-auto">
+		<div class="card-body row">
+			{% for contest in contests %}
+				<div class="course-item card col-md-auto">
+					<div class="card-body">
 						<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
-						<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a></span>
 					</div>
-				{% endfor %}
-			</div>
+					<div class="card-footer">
+						<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
-		<div class="card container">
-			<h4 class="card-header">Future tests <a style="float: right;" href="/contests/future/all.php"><i class="fas fa-bars"></i></a></h4>
+	</div>
+	<div class="card">
+		<h4 class="card-header">Future tests <a style="float: right;" href="/contests/future/all.php"><i class="fas fa-bars"></i></a></h4>
 
-			<div class="card-body row">
-				{% for contest in future %}
-					<div class="course-item card col-md-auto">
-						<div class="card-body">
-							<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
-						</div>
-						<div class="card-footer">
-							<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a>
-						</div>
+		<div class="card-body row">
+			{% for contest in future %}
+				<div class="course-item card col-md-auto">
+					<div class="card-body">
+						<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
 					</div>
-				{% endfor %}
-			</div>
+					<div class="card-footer">
+						<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 	<hr>
 	<div class="card">
 		<h4 class="card-header">Homework</h4>
-		<div class="card-body">
+		<div class="card-body row">
 			{% for contest in homework %}
-				<div class="course-item col-md-4">
-					<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
-					<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a></span>
+				<div class="course-item card col-md-auto">
+					<div class="card-body">
+						<h5 class="card-title" id="{{ contest.ID }}">{{ contest.Name }}</h5>
+					</div>
+					<div class="card-footer">
+						<a href="{{ root }}/contests/compete.php?id={{ contest.ID }}" role="button" class="btn btn-raised btn-success">Compete »</a> <a href="{{ root }}/contests/results.php?id={{ contest.ID }}" role="button" class="btn btn-primary active">View results »</a>
+					</div>
 				</div>
 			{% endfor %}
 		</div>

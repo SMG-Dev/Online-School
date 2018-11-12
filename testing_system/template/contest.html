@@ -34,7 +34,8 @@
 		<br><br>
 
 <div class="container">
-	<form id="form" method="get" action="/contests/submit.php" class="row">
+	<form id="form" method="post" action="{{root}}/contests/submit.php" class="row">
+		<input type="hidden" name="id" value="{{id}}">
 		{% for task in tasks %}
 		<div class="card container">
 			<h4 class="card-header">{{task.Name}}</h4>

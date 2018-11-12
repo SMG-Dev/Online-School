@@ -43,7 +43,7 @@ nav
 	margin-top: 0;
 }
 
-#tabs 
+#tabs, .tabs 
 {
 	position: relative;
 	display: block;
@@ -67,7 +67,7 @@ nav
 	display: none;
 }
 
-#tabs a 
+#tabs a, .tabs a 
 {
 	position: relative;
     text-decoration: none;
@@ -91,6 +91,7 @@ nav
 }
 
 
+.tabs>a.active, 
 #tabs>a.active 
 {
 	outline:none;
@@ -98,6 +99,7 @@ nav
 	background-color: transparent;
 }
 
+.tabs>a:not(.active):hover, 
 #tabs>a:not(.active):hover 
 {
 	background-color: rgba(256, 256, 256, 0.2);
@@ -170,6 +172,7 @@ nav
 		background-image: url(./../../img/icons/tabsArrowRight.png);		
 	}
 
+	.tabs a,
 	#tabs a 
 	{
 		padding: 0 40px;

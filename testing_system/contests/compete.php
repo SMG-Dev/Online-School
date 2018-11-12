@@ -46,7 +46,7 @@ for ($i = 0 ; $i < count ($task_ids) ; $i ++)
 		$tasks [$i]['Description'] = implode (array_slice (explode ("\n", $row ['Description']), 0, -intval(substr($row ['AnswerType'], 1)))+ [''], "\n");
 		if ($tasks [$i]['Description'] != '') $tasks [$i]['Description'] .= '<br>'; 
 		for ($j = 0 ; $j < count ($options) ; $j ++)
-			$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<input type=\"radio\" id=\"{$task_ids [$i]}{$options [$j]}\" name=\"{$task_ids [$i]}\" value=\"{$options [$j]}\"><label for=\"{$task_ids [$i]}{$options [$j]}\">{$options [$j]}</label></input><br>";
+			$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<input type=\"radio\" id=\"{$task_ids [$i]}{$options [$j]}\" name=\"{$task_ids [$i]}\" value=\"{$options [$j]}\"><label for=\"{$task_ids [$i]}{$options [$j]}\">&nbsp;{$options [$j]}</label></input><br>";
 	}
 	else if ($row ['AnswerType'][0] == 'm')
 	{
@@ -56,7 +56,7 @@ for ($i = 0 ; $i < count ($task_ids) ; $i ++)
 		$tasks [$i]['Description'] = implode (array_slice (explode ("\n", $row ['Description']), 0, -intval(substr($row ['AnswerType'], 1)))+ [''], "\n");
 		if ($tasks [$i]['Description'] != '') $tasks [$i]['Description'] .= '<br>'; 
 		for ($j = 0 ; $j < count ($options) ; $j ++)
-			$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<input type=\"checkbox\" id=\"{$task_ids [$i]}{$options [$j]}\" name=\"{$task_ids [$i]}\" value=\"{$options [$j]}\"><label for=\"{$task_ids [$i]}{$options [$j]}\">{$options [$j]}</label></input><br>";
+			$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<input type=\"checkbox\" id=\"{$task_ids [$i]}{$options [$j]}\" name=\"{$task_ids [$i]}\" value=\"{$options [$j]}\"><label for=\"{$task_ids [$i]}{$options [$j]}\">&nbsp;{$options [$j]}</label></input><br>";
 	}
 	else if ($row ['AnswerType'] == 'os')
 	{
@@ -73,7 +73,8 @@ for ($i = 0 ; $i < count ($task_ids) ; $i ++)
 }
 //var_dump ($tasks);
 
-echo $twig->render('contest.html', array('name' => $contest[0]['Name'],
+echo $twig->render('contest.html', array('id' => $contest[0]['ID'],
+										 'name' => $contest[0]['Name'],
 										 'description' => $contest[0]['Description'], 
 										 'tasks' => $tasks,
 										 'end' => $contest [0]['end']));

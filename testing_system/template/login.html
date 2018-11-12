@@ -1,0 +1,61 @@
+{% extends "template.html" %}
+
+{% block title %} Софийската математическа гимназия "Паисий Хилендарски" {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	
+    <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="{{ root }}/static/css/items.css" type="text/css" />
+    <link rel="stylesheet" href="{{ root }}/static/css/login.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+<div class="container login-container">
+	<div class="row">
+		<div class="col-md-6 login-form-1 shadow">
+			<h3>Вход</h3>
+			<form action="{{root}}/login.php" method="POST">
+				<input type="hidden" value="login" name="type" />
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Имейл *" name="email" value="" required />
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Парола *" name="password" value="" required />
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btnSubmit" value="Вход" />
+				</div>
+				<div class="form-group">
+					<a href="#" class="ForgetPwd">Забавена парола?</a>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6 login-form-2 shadow">
+			<h3>Регистрация</h3>
+			<form action="{{root}}/login.php" method="POST">
+				<input type="hidden" value="register" name="type" />
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Имейл *" value="" name="email" required />
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Парола *" value="" name="password" required />
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Повтори паролата *" value="" name="confirm" required />
+				</div>
+				<div class="form-group">
+					<script src='https://www.google.com/recaptcha/api.js'></script>
+					<div class="g-recaptcha" data-sitekey="6LcFN3kUAAAAAEceLTlBxXFKoCXAIUpmKbKuqPHF"></div>
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btnSubmit" value="Регистрирай" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

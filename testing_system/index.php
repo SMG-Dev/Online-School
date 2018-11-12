@@ -7,6 +7,10 @@ $twig = new Twig_Environment($loader);
 require_once '../lib/mysql.php';
 $conn = new MySQL (SMG_DB);
 
+include_once '../lib/sessions.php';
+
+$student_access_tocken = $_SESSION['access_token'];
+
 date_default_timezone_set('Europe/Sofia');
 $now = date ("Y-m-d H:i:s");
 
@@ -18,7 +22,8 @@ $res = $stm->get_result ();
 $future = array ();
 while ($row = $res->fetch_assoc ())
 {
-	$future [] = $row;
+	if ((intval ($row ['AccessToken']) & $student_access_tocken) == intval ($row ['AccessToken']))
+		$future [] = $row;
 }
 
 $stm = $conn->prepare ('SELECT * FROM `Contest` WHERE `live`=? AND `start` <= ? AND ? <= `end`');
@@ -31,7 +36,10 @@ $res = $stm->get_result ();
 $contests = array ();
 while ($row = $res->fetch_assoc ())
 {
-	$contests [] = $row;
+	//echo $row ['AccessToken'] . '<br>';
+	//echo intval ($row ['AccessToken']) . "&" . $student_access_tocken . ' == ' . intval ($row ['AccessToken']) . '<br>';
+	if ((intval ($row ['AccessToken']) & $student_access_tocken) == intval ($row ['AccessToken']))
+		$contests [] = $row;
 }
 
 $live = 0;
@@ -41,7 +49,8 @@ $res = $stm->get_result ();
 $homework = array ();
 while ($row = $res->fetch_assoc ())
 {
-	$homework [] = $row;
+	if ((intval ($row ['AccessToken']) & $student_access_tocken) == intval ($row ['AccessToken']))
+		$homework [] = $row;
 }
 
 echo $twig->render('index.html', array('future' => $future, 'contests' => $contests, 'homework' => $homework));

@@ -1,1 +1,21 @@
-{% do redirect('/submits/view/{{id}}') %}
+<script>
+let url = "../submits/view.php?id={{id}}";
+
+// Sets the new location of the current window.
+window.location = url;
+ 
+// Sets the new href (URL) for the current window.
+window.location.href = url;
+ 
+// Assigns a new URL to the current window.
+window.location.assign(url);
+ 
+// Replaces the location of the current window with the new one.
+window.location.replace(url);
+ 
+// Sets the location of the current window itself.
+self.location = url;
+ 
+// Sets the location of the topmost window of the current window.
+top.location = url;
+</script>
