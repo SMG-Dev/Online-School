@@ -18,7 +18,7 @@ function encode (string $password)
 
 function check (string $password, string $hash)
 {
-	return strcmp(encode ($password), $hash);
+	return strcmp(encode ($password), $hash) == 0;
 }
 
 if (isset($_POST ['type']))
