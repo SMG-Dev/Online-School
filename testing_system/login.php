@@ -74,11 +74,11 @@ if (isset($_POST ['type']))
 			$response = (array)json_decode ($str);
 			if ($response ['success'] == true)
 			{
-				if ($_POST ['password'] == $_POST ['confirm'])
+				if ($_POST ['regpassword'] == $_POST ['regconfirm'])
 				{
 					$conn = new MySQL (SMG_DB);
 					$stm = $conn->prepare ('SELECT * FROM `users` WHERE `email` = ?');
-					$email = $_POST ['email'];
+					$email = $_POST ['regemail'];
 					$stm->bind_param ('s', $email);
 					$stm->execute ();
 					$res = $stm->get_result ();
@@ -101,8 +101,8 @@ if (isset($_POST ['type']))
 					{
 						$conn2 = new MySQL (SMG_DB);
 						$stm2 = $conn2->prepare ('INSERT INTO users (email, password, accessToken) VALUES (?, ?, ?)');
-						$email = $_POST ['email'];
-						$password = encode ($_POST['password']);
+						$email = $_POST ['regemail'];
+						$password = encode ($_POST['regpassword']);
 						$token = 0;
 						$stm2->bind_param ('ssi', $email, $password, $token);
 						$stm2->execute ();
