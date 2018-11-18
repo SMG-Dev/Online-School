@@ -7,6 +7,8 @@
 	
     <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
     <link rel="stylesheet" href="{{ root }}/static/css/items.css" type="text/css" />
+	
+	<script src="{{root}}/CodeMirror/lib/codemirror.js"></script><script src="{{root}}/CodeMirror/mode/clike/clike.js"></script><script src="{{root}}/CodeMirror/addon/edit/matchbrackets.js"></script><script src="{{root}}/CodeMirror/addon/hint/show-hint.js"></script><script src="{{root}}/CodeMirror/addon/hint/anyword-hint.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -84,6 +86,31 @@
 				  console.log( $( this ).serializeArray() );
 				  //event.preventDefault();
 				});
+			    var editors = [];
+			    var modes = {
+			      js: "javascript",
+			      java: "text/x-java",
+			      c: "text/x-csrc",
+			      cpp: "text/x-c++src",
+			      cs: "text/x-csharp",
+			      php: "application/x-httpsd-php",
+			      py: "text/x-python",
+			      cy: "text/x-cython",
+			      hs: "text/x-haskell",
+			      ts: "application/typescript"
+			    };
+			    CodeMirror.modeURL = "/testing_system/CodeMirror/mode/%N/%N.js";
+			    var elements = document.getElementsByClassName("sourcecode");
+			    for (let i = 0; i < elements.length ; i += 1)
+			    {
+			      editors [editors.length] = CodeMirror.fromTextArea(elements [i], {
+			      	mode: modes [elements [i].dataset.language],
+			      	extraKeys: {"Ctrl-Space": "autocomplete"},
+			      	theme: "default",
+			      	lineNumbers: true,
+			      	lineWrapping: true
+			      });
+			    }
 		});
 	</script>
 {% endblock %} 

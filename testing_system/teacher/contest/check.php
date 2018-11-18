@@ -1,10 +1,10 @@
 <?php
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 $loader = new Twig_Loader_Filesystem('../template');
 $twig = new Twig_Environment($loader);
 
-require_once '../lib/mysql.php';
+require_once '../../lib/mysql.php';
 $conn = new MySQL (SMG_DB);
 
 date_default_timezone_set('Europe/Sofia');
@@ -25,8 +25,6 @@ if (count ($contest) != 1)
 {
 	echo $twig->render('404.html');
 }
-
-srand ((float)(microtime()*100000000));
 
 $task_ids = json_decode ($contest [0]['Tasks']);
 $tasks = array ();
@@ -68,9 +66,7 @@ for ($i = 0 ; $i < count ($task_ids) ; $i ++)
 	}
 	else if ($row ['AnswerType'] == 'informatics')
 	{
-		$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<br><br><textarea data-language=\"cpp\" class=\"sourcecode\" name=\"{$task_ids [$i]}\"></textarea>";
-
-//		<div style="border: 2pt solid #777;"><textarea id="sourcecode" name="sourcecode" rows="20" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" wrap="on" style="border: 1px solid black;" class="form-control"></textarea></div>
+		$tasks [$i]['Description'] = $tasks [$i]['Description'] . "<br><br><textarea name=\"{$task_ids [$i]}\"></textarea>";
 	}
 }
 //var_dump ($tasks);
