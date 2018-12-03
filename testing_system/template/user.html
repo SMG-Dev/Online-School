@@ -1,0 +1,58 @@
+{% extends "template.html" %}
+
+{% block title %} Софийската математическа гимназия "Паисий Хилендарски" {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	
+    <link rel="stylesheet" href="/scripts/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="{{ root }}/static/css/items.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+        <div class="parallaxContainer">
+            <div class="parallax"></div>
+            <div class="mobParallax"></div>
+        </div>
+
+        <div class="introWrap">
+            <div class="intro">
+                <div>
+                    <p class="introTitle">
+                        Добре дошли в системата за тестове на
+                        <br>Софийска Математическа Гимназия
+                        <br>"Паисий Хилендарски"
+                    </p>
+                </div>
+            </div>
+            <div class="introTextWrap">
+                <span class="introText">
+                    <i>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+                    <i>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+                    <i>
+                    "Работим за модерно училище"</i>
+                    <p align="right">- Алекс Цветанов (TechEdu++)</p>
+				</span>
+            </div>
+        </div>
+
+		<br><br>
+
+<div class="container">
+	<div class="card">
+		<h4 class="card-header">User details</h4>
+
+		<div class="card-body row">
+			{{username}} <br>
+			{{accessToken}}
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+

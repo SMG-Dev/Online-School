@@ -1,10 +1,12 @@
 {% set root = '/testing_system' %}
+{% set username = app.request.cookies.get('username') %}
+{% set accessToken = app.request.cookies.get ('accessToken') %}
 <!DOCTYPE html>
 <html lang="bg">
 
 <head>
 	  {% block head %}
-			<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+			<li`nk href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
 			<link href="{{ root }}/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 			<link href="{{ root }}/static/css/footer.css" rel="stylesheet">
 			<link href="{{ root }}/static/css/header.css" rel="stylesheet">
@@ -13,6 +15,40 @@
 
 			<link rel="icon" type="image/png" href="/img/icons/favicon.png" />
 			<link rel="stylesheet" href="{{ root }}/static/node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+			<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+			<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+			<script>
+			window.addEventListener("load", function(){
+			window.cookieconsent.initialise({
+			  "palette": {
+				"popup": {/*
+				  "background": "#00AFFF"
+				  0 175 255
+				  26 35 105*/
+				  "background":"rgba(13,100,180,0.95)"
+				},
+				"button": {
+				  "background": "rgb(43,130,220)"
+				}
+			  },
+			  "content": {
+				"message": "Продължавайки в нашия сайт или чрез натискане на бутона „ОК“ вдясно, Вие се съгласявате с нашата „Декларация за поверителност“ и <a href=\"https://cookiesandyou.com/\">„Правила за бисквитки“</a>.",
+				"dismiss": "ОК",
+			  },
+			"showLink": false
+			})});
+			</script>
+			<style> 
+				.cc-btn { min-width: 140px; }
+				a.cc-btn:hover { 
+				background: rgb(63,150,240) !important;
+				}
+				.cc-message a {
+					color: white;
+					text-decoration: underline;
+				}
+			</style>
 		{% endblock %}
     <title>{% block title %}{% endblock %}</title>
     <meta charset="utf-8" />
@@ -20,7 +56,6 @@
 </head>
 
 <body>
-
     <!--------------HEADER-------------->
     <header>
 		<nav class="navbar navbar-expand-lg navbar-light">
@@ -62,6 +97,9 @@
     </header>
     <!--           CONTENT-------------->
 	<br>
+	Cookie:
+	{{username}}<br>
+	{{accessToken}}<br>
     <main>	
 				{% block alerts %} 
 					<div class="container">

@@ -8,24 +8,24 @@ nav
 	display: none;
 }
 
-.tabsContent.fixed
+.subtabsContent.fixed
 {
 	margin-top: 60px;
 }
 
-.tabsContent.fixedLittle
+.subtabsContent.fixedLittle
 {
 	margin-top: 60px;
 	width: 100%
 }
 
-.tabsContent 
+.subtabsContent 
 {
 	width: 100%;
 	padding: 0;
 }
 
-.tabsWrap
+.subtabsWrap
 {
 	box-shadow: 0 1px 10px rgba(0,0,0,0.19), 0 5px 10px rgba(0,0,0,0.23);
 	height: 60px;
@@ -34,7 +34,7 @@ nav
 	z-index: 6;
 }
 
-.tabsWrap.fixed
+.subtabsWrap.fixed
 {
 	position:fixed;
 	top: 90px;
@@ -43,7 +43,7 @@ nav
 	margin-top: 0;
 }
 
-#tabs, .tabs 
+#subtabs, .subtabs 
 {
 	position: relative;
 	display: block;
@@ -55,19 +55,19 @@ nav
 	
 }
 
-.tabsWrap 
+.subtabsWrap 
 {
 	overflow-y: scroll;
     -ms-overflow-style: none; 
     overflow: -moz-scrollbars-none; 
 }
 
-.tabsWrap::-webkit-scrollbar 
+.subtabsWrap::-webkit-scrollbar 
 { 
 	display: none;
 }
 
-#tabs a, .tabs a 
+#subtabs a, .subtabs a 
 {
 	position: relative;
     text-decoration: none;
@@ -91,16 +91,16 @@ nav
 }
 
 
-.tabs>a.active, 
-#tabs>a.active 
+.subtabs>a.active, 
+#subtabs>a.active 
 {
 	outline:none;
 	color: rgba(256, 256, 256, 1);
 	background-color: transparent;
 }
 
-.tabs>a:not(.active):hover, 
-#tabs>a:not(.active):hover 
+.subtabs>a:not(.active):hover, 
+#subtabs>a:not(.active):hover 
 {
 	background-color: rgba(256, 256, 256, 0.2);
 }
@@ -163,28 +163,28 @@ nav
 	{
 		left: 0;
 		height: 57px;
-		background-image: url(./../../img/icons/tabsArrowLeft.png);
+		background-image: url(./../../img/icons/subtabsArrowLeft.png);
 	}
 
 	#rightArrow
 	{
 		right: 0;
-		background-image: url(./../../img/icons/tabsArrowRight.png);		
+		background-image: url(./../../img/icons/subtabsArrowRight.png);		
 	}
 
-	.tabs a,
-	#tabs a 
+	.subtabs a,
+	#subtabs a 
 	{
 		padding: 0 40px;
 		font-size: 85%;
 	}
 
-	.tabsWrap.fixed
+	.subtabsWrap.fixed
 	{
 		top: 0;
 	}
 
-	.tabsContent.fixed
+	.subtabsContent.fixed
 	{
 		margin-top: 360px;
 	}
@@ -213,23 +213,23 @@ nav
 	{
 		left: 0;
 		height: 57px;
-		background-image: url(./../../img/icons/tabsArrowLeft.png);
+		background-image: url(./../../img/icons/subtabsArrowLeft.png);
 	}
 
 	#rightArrow.big
 	{
 		right: 0;
-		background-image: url(./../../img/icons/tabsArrowRight.png);		
+		background-image: url(./../../img/icons/subtabsArrowRight.png);		
 	}
 
-	.tabs.big a,
-	#tabs.big a 
+	.subtabs.big a,
+	#subtabs.big a 
 	{
 		padding: 0 40px;
 		font-size: 85%;
 	}
 
-	.tabsWrap.fixed.big
+	.subtabsWrap.fixed.big
 	{
 		top: 0;
 	}

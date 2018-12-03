@@ -3,6 +3,7 @@ require_once 'vendor/autoload.php';
 
 $loader = new Twig_Loader_Filesystem('template');
 $twig = new Twig_Environment($loader);
+$twig->addGlobal('session', $_SESSION);
 
 date_default_timezone_set('Europe/Sofia');
 $now = date ("Y-m-d H:i:s");
@@ -47,6 +48,10 @@ if (isset($_POST ['type']))
 		{
 			if (check ($_POST ['password'], $users [0]['password']))
 			{
+				foreach (array($users [0]) as $key => $value) {
+					$_COOKIE [$key] = $value;
+				}
+				unset ($_COOKIE ['password']);
 				echo $twig->render('login.html', array ('success' => 'Влязохте успешно.'));
 			}
 			else

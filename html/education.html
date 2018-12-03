@@ -1,0 +1,84 @@
+{% extends "template.html" %}
+
+{% block title %} СМГ Курсове {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="/scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/courses.css" type="text/css" />
+	
+	<script src="/scripts/js/tabs.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+	            <button class="big" id="leftArrow" style="display: none;"></button>
+            <button class="big" id="rightArrow" style="display: none;"></button>
+        <div class="tabsWrap">
+            <div class="big" id="tabs" style="width: 765px;">
+                <a id="tab1-tab" href="#tab1" class="active ripple">СЕДМИЧНО РАЗПИСАНИЕ</a>
+                <a id="tab2-tab" onclick="window.location='https://app.shkolo.bg/';" href="#tab2" class="ripple">ЕЛЕКТРОНЕН ДНЕВНИК</a>
+                <a id="tab3-tab" onclick="window.location='https://smg.bg/testing_system/index.php';" href="#tab3" class="ripple">ОНЛАЙН УЧИЛИЩЕ</a>
+                <a id="tab4-tab" href="#tab4" class="ripple">ГРАФИЦИ</a>
+                <a id="tab5-tab" href="#tab5" class="ripple">СТИПЕНДИИ</a>
+                <a id="tab6-tab" href="#tab6" class="ripple">УЧЕБНИ ПЛАНОВЕ</a>
+                <a id="tab7-tab" href="#tab7" class="ripple">ЗА 12. КЛАС</a>
+                <a id="tab8-tab" href="#tab8" class="ripple">ЗА 7. КЛАС</a>
+                <a id="tab9-tab" href="#tab9" class="ripple">ЗА 10. КЛАС</a>
+                <span class="bar" style="width: 214px; left: 0px;"></span>
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div id="tab1">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab2">
+                <div class="materialContainer">
+                    <center>
+                        <h1>Пренасочване към „Електронен дневник“</h1>
+                        <h3>(в случай, че не успеете, вижте го от <a href="https://app.shkolo.bg/">тук</a>)</h3>
+                    </center>
+                </div>
+            </div>
+            <div id="tab3">
+                <div class="materialContainer">
+                    <center>
+                        <h1>Пренасочване към „Електронен дневник“</h1>
+                        <h3>(в случай, че не успеете, вижте го от <a href="https://smg.bg/testing_system/index.php">тук</a>)</h3>
+                    </center>
+                </div>
+            </div>
+            <div id="tab4">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tabr5">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab6">
+                <div class="materialContaine7r">
+                </div>
+            </div>
+            <div id="tab7">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab8">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab9">
+                <div class="materialContainer">
+                </div>
+            </div>
+        </div>
+
+<!--
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="/img/nbpYKyt.png" />
+                    </center>
+-->
+{% endblock %}

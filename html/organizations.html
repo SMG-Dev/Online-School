@@ -4,11 +4,12 @@
 
 {% block head %}
     {{ parent() }}
-		<link rel="stylesheet" href="scripts/css/tabs.css" type="text/css" />
-    <link rel="stylesheet" href="scripts/css/info.css" type="text/css" />
-
-		<script src="scripts/js/tabs_class.js" type="text/javascript"></script>
-
+	<link rel="stylesheet" href="/scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/info.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/tabMenu.css" type="text/css" />
+	
+	<script src="/scripts/js/tabs.js" type="text/javascript"></script>
+	<script src="/scripts/js/tabMenu.js" type="text/javascript"></script>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +17,7 @@
             <button id="leftArrow"></button>
             <button id="rightArrow"></button>
         <div class="tabsWrap">
-            <div class="tabs">
+            <div id="tabs">
                 <a id="tab1-tab" href="#tab1" class="active ripple">НАСТОЯТЕЛСТВО</a>
                 <a id="tab2-tab" href="#tab2" class="ripple">ОБЩЕСТВЕН СЪВЕТ</a>
                 <a id="tab3-tab" href="#tab3" class="ripple">УЧЕНИЧЕСКИ СЪВЕТ</a>
@@ -111,40 +112,34 @@
             </div>
             <div id="tab3">
                 <div class="materialContainer">
-					<div class="tabsWrap">
-						<div class="tabs">
-						<center>
-							<a id="tab4-tab" href="#tab4" class="active ripple">Цели</a>
-							<a id="tab5-tab" href="#tab5" class="       ripple">Клубове</a>
-							<a id="tab6-tab" href="#tab6" class="       ripple">Съобщения</a>
-							<span class="bar"></span>
-						</center>
-						</div>
+					<div class="tab">
+					  <button class="tablinks" data-show data-tab='aims'>Цели</button>
+					  <button class="tablinks"           data-tab='clubs'>Клубове</button>
+					  <button class="tablinks"           data-tab='notifications'>Съобщения</button>
 					</div>
-					<div class="tabsContent">
-						<div id="tab4">
-							<h2>Цел</h2>
-							Учническият съвет на СМГ се занимава с организиране на дейности за ученици и деца. Нашата основна цел е да дадем възможност на всеки един учиник да изрази себе си чрез събитията, които ние правим.<br>
-<br>
-							Присъедини се и ти към нас! Добре дошъл си по всяко време! ☺
-							<hr>
-							<h2>Дейности</h2>
-							Част от нашите дейности всяка година включват организиранe на:
-<ul>
-    <li>Благотворителни концерти</li>
-	<li>"Денят на отворените умове"</li>
-	<li>Завършването на учебната година</li>
-	<li>Спортни дейнсти</li>
-	<li>Театрални представления и литературни четения</li>
-	<li>Извънучебни дейности в партньорство с други училища</li>
-</ul>
-						</div>
-						<div id="tab5">
-						b
-						</div>
-						<div id="tab6">
-						c
-						</div>
+					<div id="aims" class="tabcontent">
+						<h2>Цел</h2>
+						Учническият съвет на СМГ се занимава с организиране на дейности за ученици и деца. Нашата основна цел е да дадем възможност на всеки един учиник да изрази себе си чрез събитията, които ние правим.<br>
+						<br>
+						Присъедини се и ти към нас! Добре дошъл си по всяко време! ☺
+						<hr>
+						<h2>Дейности</h2>
+						Част от нашите дейности всяка година включват организиранe на:
+						<ul>
+							<li>Благотворителни концерти</li>
+							<li>"Денят на отворените умове"</li>
+							<li>Завършването на учебната година</li>
+							<li>Спортни дейнсти</li>
+							<li>Театрални представления и литературни четения</li>
+							<li>Извънучебни дейности в партньорство с други училища</li>
+						</ul>
+					</div>
+					<div id="clubs" class="tabcontent">
+					b
+					</div>
+					<div id="notifications" class="tabcontent">
+					c
+					</div>
 					</div>
                 </div>
             </div>

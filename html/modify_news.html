@@ -1,0 +1,206 @@
+{% extends "template.html" %}
+
+{% block title %} СМГ Новини {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+	<link rel="stylesheet" href="scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/css/news.css" type="text/css" />
+    <link rel="stylesheet" href="scripts/css/page.css" type="text/css" />
+	<script src="scripts/js/tabs.js" type="text/javascript"></script>
+	<style>
+		.materialContainer div {
+			overflow: auto;
+		}
+		.materialContainer div img {
+			padding-right: 20px;
+			width: auto;
+			height: auto;
+			margin: 10px;
+		}
+		.materialContainer div:nth-of-type(2n+0) img {
+			float:left !important;
+		}
+		.materialContainer div:nth-of-type(2n+1) img {
+			float:right !important;
+		}
+		.materialContainer div img::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+		
+		.materialContainer div h2 {
+			font-size: 175%;
+			text-align: center;
+			/*text-decoration: underline solid gray;*/
+		}
+	</style>
+	<script type="text/javascript">
+		function preview ()
+		{
+			let title = document.getElementsByName("title")[0].value;
+			let body = document.getElementsByName("body")[0].value;
+			document.getElementById ('preview').innerHTML = `
+			<h2>${title}</h2>
+			<p></p>
+			<div class="fb-like" data-href="http://smg.bg/news.php?id=`+ "{{id}}" + `" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div><p></p><p></p>
+			<p>${body}</p>
+			<p></p>
+			`;
+		}
+	</script>
+{% endblock %}
+
+{% block content %}
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=145071102807525&autoLogAppEvents=1';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+    <main>
+            <button id="leftArrow"></button>
+            <button id="rightArrow"></button>
+        <div class="tabsWrap">
+            <div id="tabs">
+                <a id="tab1-tab" href="#tab1" class="active ripple">НАЙ-НОВИ</a>
+                <a id="tab2-tab" href="#tab2" class="ripple">АКЦЕНТИ</a>
+                <a id="tab3-tab" href="#tab3" class="ripple">АРХИВ</a><!--УСПЕХИ</a>-->
+                <span class="bar"></span>   
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div id="tab2">
+                <div class="materialContainer">
+						<!--
+	                <center>
+						<h1>UNDERGOING MAINTENANCE</h1><img src="https://i.imgur.com/nbpYKyt.png"/>
+					</center>
+						-->
+					{% for news in accents %}
+						<div>{{ news.text | raw }}</div>
+						<hr>
+					{% endfor %}
+				</div>
+            </div>
+            <div id="tab1">
+                <div class="materialContainer">
+					{% for news in newest %}
+						<div>{{ news.text | raw }}</div>
+						<hr>
+					{% endfor %}
+				</div>
+            </div>
+            <div id="tab3">
+                <div class="materialContainer">
+					{% for news in awards %}
+						<div>{{ news.text | raw }}</div>
+						<hr>
+					{% endfor %}
+				</div>
+            </div>
+        </div>
+		<div class="materialContainer" id="controllers">
+			<center> <h1>
+				<div class="pagination">
+				  <a href="/news.php?id={{ id }}&page={{ page - 1 }}">&laquo;</a>
+				  {% for p in pages %} 
+					{% if p == page %}
+						<a class="active" href="/news.php?id={{ id }}&page={{ p }}">{{ p }}</a>
+					{% elseif p == 0 %}
+						<a href="#">...</a>
+					{% else %}
+						<a href="/news.php?id={{ id }}&page={{ p }}">{{ p }}</a>
+					{% endif %}
+				  {% endfor %}
+				  <a href="/news.php?id={{ id }}&page={{ page + 1 }}">&raquo;</a>
+				</div>
+			</h1> </center>
+		</div>
+    </main>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">&times;</span>
+		  <h2>Промяна на новина #<span id="id"></span></h2>
+		</div>
+
+		<button id="leftArrow"></button>
+		<button id="rightArrow"></button>
+		<div class="tabsWrap">
+				<div id="tabs">
+						<a id="tab1-tab" href="#tab1" class="active ripple">СЪЗДАЙ</a>
+						<a id="tab2-tab" href="#tab2" onclick="preview();" class="ripple">ИЗГЛЕД</a>
+						<span class="bar"></span>   
+				</div>
+		</div>
+		<div class="tabsContent">
+				<div id="tab1">
+						<div class="materialContainer">
+							{% if warn is defined %}
+									<div class="alert alert-warn" role="alert">
+										<h4 class="alert-heading">Внимание!</h4>
+										<p>{{ warn | raw }}</p>
+										<hr>
+									</div>
+							{% endif %}
+							{% if success is defined %}
+									<div class="alert alert-success" role="alert">
+										<h4 class="alert-heading">Здравейте!</h4>
+										<p>{{ success | raw }}</p>
+										<hr>
+									</div>
+							{% endif %}
+							{% if error is defined %}
+									<div class="alert alert-danger" role="alert">
+										<h4 class="alert-heading">Грешка!</h4>
+										<p>{{ error | raw }}</p>
+										<hr>
+										<p class="mb-0">Опитайте отново!</p>
+									</div>
+							{% endif %}
+							<form action="/modify_news.php">
+								Заглавие на новината: <input type="text" name="title" value="will be set" required></input><br>
+								Акцент ли е: <select name="accent">
+									<option value="0">Не</option>
+									<option value="1">Да</option>
+								</select>
+								<br>
+								Съдържание на новината (в HTML формат):<br>
+								<textarea rows="20" cols="50" name="body" value="will be set" required> </textarea>
+								<br>
+								<input type="text" name="passcode" value="" placeholder="Код за верификация">
+								<br>
+								<input type="submit" value="Публикувай">
+							</form>
+						</div>
+				</div>
+				<div id="tab2">
+						<div class="materialContainer">
+							PREVIEW:
+							<div id="preview"></div>
+							<hr>
+						</div>
+				</div>
+		</div>
+	  <!-- Modal content -->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">&times;</span>
+		  <h2 contenteditable="true" id="modal_news_header">Modal Header</h2>
+		</div>
+		<div class="modal-body" id="modal_news_body">
+		  <p>Some text in the Modal Body</p>
+		  <p>Some other text...</p>
+		</div>
+		<div class="modal-footer">
+		</div>
+	  </div>
+
+	</div>
+{% endblock %}
+

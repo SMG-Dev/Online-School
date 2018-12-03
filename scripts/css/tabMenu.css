@@ -1,0 +1,85 @@
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab
+{
+	box-shadow: 0 1px 10px rgba(0,0,0,0.19), 0 5px 10px rgba(0,0,0,0.23);
+	/*position: relative;*/
+	background-color: rgb(26, 35, 115);
+	z-index: 6;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	width: auto;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.tab button {
+	position: relative;
+    text-decoration: none;
+	display: block;
+	float: left;
+    height: 60px;
+    line-height: 60px;
+	font-size: 100%;
+	font-weight: 500;
+	color: rgba(256, 256, 256, 0.7);
+	text-align: center;
+    outline: none;
+	overflow: hidden;
+	-webkit-transition: ease-in-out .2s;
+	-moz-transition: ease-in-out .2s;
+	-o-transition: ease-in-out .2s;
+	-ms-transition: ease-in-out .2s;
+	transition: ease-in-out .2s;
+	width: auto;
+	padding: 0 50px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button:not(.active):hover
+{
+	background-color: rgba(256, 256, 256, 0.2);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tab button.active {
+	outline:none;
+	color: rgba(256, 256, 256, 1);
+	background-color: transparent;
+	padding-bottom: 4px;
+	border-bottom: 4px solid white;
+	font-weight: bold;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.tab button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,76 @@
+{% extends "template.html" %}
+
+{% block title %} СМГ Курсове {% endblock %}
+
+{% block head %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="/scripts/css/tabs.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/courses.css" type="text/css" />
+    <link rel="stylesheet" href="/scripts/css/tabMenu.css" type="text/css" />
+	
+	<script src="/scripts/js/tabs.js" type="text/javascript"></script>
+	<script src="/scripts/js/tabMenu.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+		<button id="leftArrow" style="display: none;"></button>
+		<button id="rightArrow" style="display: none;"></button>
+        <div class="tabsWrap">
+            <div id="tabs" style="width: 765px;">
+                <a id="tab1-tab" href="#tab1" class="active ripple">ПРОЕКТИ</a>
+                <a id="tab2-tab" href="#tab2" class="ripple">СЪСТЕЗАНИЯ</a>
+                <a id="tab3-tab" href="#tab3" class="ripple">ИЗВЪНКЛАСНИ ДЕЙНОСТИ</a>
+                <a id="tab4-tab" href="#tab4" class="ripple">ШКОЛИ</a>
+                <a id="tab5-tab" href="#tab5" class="ripple">КЛУБОВЕ</a>
+                <span class="bar" style="width: 214px; left: 0px;"></span>
+            </div>
+        </div>
+        <div class="tabsContent">
+            <div id="tab1">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab2">
+                <div class="materialContainer">
+					<div class="tab">
+					  <button class="tablinks" data-show data-tab='smg'>Организирани от СМГ</button>
+					  <button class="tablinks"           data-tab='others'>Организирани от други организации</button>
+					</div>
+
+					<div id="smg" class="tabcontent">
+						<center>
+							<h1>UNDERGOING MAINTENANCE</h1>
+							<img src="/img/nbpYKyt.png" />
+						</center>
+					</div>
+
+					<div id="others" class="tabcontent">
+						<center>
+							<h1>UNDERGOING MAINTENANCE</h1>
+							<img src="/img/nbpYKyt.png" />
+						</center>
+					</div>
+                </div>
+            </div>
+            <div id="tab3">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab4">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <div id="tab5">
+                <div class="materialContainer">
+                </div>
+            </div>
+        </div>
+
+<!--
+                    <center>
+                        <h1>UNDERGOING MAINTENANCE</h1>
+                        <img src="/img/nbpYKyt.png" />
+                    </center>
+-->
+{% endblock %}

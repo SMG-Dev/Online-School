@@ -9,7 +9,7 @@ $conn = new MySQL (SMG_DB);
 
 include_once '../lib/sessions.php';
 
-$student_access_tocken = $_SESSION['access_token'];
+$student_access_tocken = $_COOKIE['accessToken'];
 
 date_default_timezone_set('Europe/Sofia');
 $now = date ("Y-m-d H:i:s");

@@ -225,4 +225,6 @@ main
 
 }
 
-
+.wide {
+	width: 100% !important;
+}
